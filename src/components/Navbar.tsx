@@ -48,6 +48,7 @@ const servicesList: ServiceItem[] = [
 
 export default function Navbar() {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -84,14 +85,14 @@ export default function Navbar() {
         <div className="px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between">
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
-            <div className="relative h-9 sm:h-11 w-36 sm:w-44 transition-transform duration-200 group-hover:scale-[1.02] bg-white/40 dark:bg-white/90 dark:px-2 dark:py-1 dark:rounded-xl">
+            <div className="transition-transform duration-200 group-hover:scale-[1.02] dark:bg-white dark:px-2 dark:py-0.5 dark:rounded-xl inline-flex items-center">
               <Image
                 src="/images/gosvizzera-logo.png"
                 alt="gosvizzera"
-                fill
+                width={160}
+                height={40}
                 priority
-                sizes="(max-width: 640px) 144px, 176px"
-                className="object-contain object-left"
+                className="h-8 sm:h-9.5 w-auto object-contain block"
               />
             </div>
           </Link>
@@ -260,7 +261,12 @@ export default function Navbar() {
 
             <button
               type="button"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={() => {
+                setIsMobileMenuOpen(!isMobileMenuOpen);
+                if (isMobileMenuOpen) {
+                  setIsMobileServicesOpen(false);
+                }
+              }}
               className="p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:text-brand hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
               aria-label="Toggle Menu"
               aria-expanded={isMobileMenuOpen}
@@ -283,7 +289,10 @@ export default function Navbar() {
           <div className="lg:hidden border-t border-slate-100 dark:border-slate-800 px-4 py-4 space-y-3 bg-white dark:bg-slate-900 rounded-b-2xl animate-in fade-in slide-in-from-top-2 duration-200">
             <Link
               href="/"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                setIsMobileServicesOpen(false);
+              }}
               className="block px-3 py-2 text-base font-medium text-slate-800 dark:text-slate-100 hover:text-brand dark:hover:text-teal-300 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg"
             >
               Home
@@ -293,12 +302,12 @@ export default function Navbar() {
             <div className="space-y-1">
               <button
                 type="button"
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
                 className="w-full flex items-center justify-between px-3 py-2 text-base font-medium text-slate-800 dark:text-slate-100 hover:text-brand dark:hover:text-teal-300 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg"
               >
                 <span>Services</span>
                 <svg
-                  className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? "rotate-180 text-brand dark:text-teal-300" : "text-slate-400 dark:text-slate-500"}`}
+                  className={`w-4 h-4 transition-transform duration-200 ${isMobileServicesOpen ? "rotate-180 text-brand dark:text-teal-300" : "text-slate-400 dark:text-slate-500"}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -308,7 +317,7 @@ export default function Navbar() {
                 </svg>
               </button>
 
-              {isServicesOpen && (
+              {isMobileServicesOpen && (
                 <div className="pl-4 pr-2 py-2 space-y-1.5 bg-slate-50/70 dark:bg-slate-800/70 rounded-xl border border-slate-100 dark:border-slate-700/80">
                   {servicesList.map((service) => (
                     <Link
@@ -316,7 +325,7 @@ export default function Navbar() {
                       href={service.href}
                       onClick={() => {
                         setIsMobileMenuOpen(false);
-                        setIsServicesOpen(false);
+                        setIsMobileServicesOpen(false);
                       }}
                       className="block px-3 py-2 text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-brand dark:hover:text-teal-300 hover:bg-white dark:hover:bg-slate-700/80 rounded-lg transition-colors"
                     >
@@ -346,6 +355,7 @@ export default function Navbar() {
             <div className="pt-3 border-t border-slate-100 dark:border-slate-800 space-y-3">
               <a
                 href="tel:+14694035472"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="flex items-center gap-3 px-3 py-2 text-sm font-semibold text-slate-800 dark:text-slate-100 hover:text-brand rounded-lg bg-slate-50 dark:bg-slate-800"
               >
                 <span className="w-8 h-8 rounded-full bg-brand/10 dark:bg-teal-400/10 text-brand dark:text-teal-300 flex items-center justify-center">

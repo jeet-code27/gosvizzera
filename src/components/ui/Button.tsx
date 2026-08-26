@@ -59,6 +59,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         <Link
           href={href}
           className={cn(buttonVariants({ variant, size, className }))}
+          onClick={props.onClick as any}
         >
           {shimmerContent}
         </Link>

@@ -199,7 +199,7 @@ export default function AboutPage() {
           {/* AnimatedText Headline with Line Break after About */}
           <div className="pt-2">
             <AnimatedText
-              text={"About\nSvizzera Healthcare Solutions"}
+              text={"About\nSvizzera Healthcare\nSolutions"}
               duration={0.035}
               delay={0.04}
               underlineGradient="from-teal-400 via-brand to-emerald-400"
