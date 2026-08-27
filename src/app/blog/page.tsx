@@ -5,7 +5,8 @@ import type { Metadata } from "next";
 import connectToDatabase from "@/lib/mongodb";
 import Post from "@/lib/models/Post";
 import Category from "@/lib/models/Category";
-import { Calendar, Clock, ArrowRight, Star, Search, Sparkles } from "lucide-react";
+import { Calendar, Clock, ArrowRight, Star } from "lucide-react";
+import BlogHero from "@/components/blog/BlogHero";
 import BlogClientView from "@/components/blog/BlogClientView";
 import Footer from "@/components/Footer";
 
@@ -59,29 +60,11 @@ export default async function BlogPage() {
 
   return (
     <>
-      <main className="min-h-screen bg-transparent pt-12 pb-24">
-      {/* Background Subtle Gradient & Glow */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
-        <div className="absolute top-1/6 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-teal-500/5 dark:bg-teal-400/5 blur-[120px] rounded-full" />
-      </div>
+      <main className="min-h-screen bg-transparent pb-24">
+        {/* About-style Animated Hero Section */}
+        <BlogHero />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        {/* Header Title Section */}
-        <div className="max-w-3xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand/5 dark:bg-teal-500/10 border border-brand/15 dark:border-teal-500/20 text-brand dark:text-teal-300 text-xs font-semibold tracking-wider uppercase font-sans">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>KNOWLEDGE & INDUSTRY INSIGHTS</span>
-          </div>
-
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-slate-900 dark:text-white leading-[1.15]">
-            Healthcare Revenue Cycle.{" "}
-            <span className="italic text-brand dark:text-teal-400">Expert Perspectives.</span>
-          </h1>
-
-          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed max-w-2xl mx-auto">
-            Practical strategies, regulatory updates, and benchmark analyses to help healthcare leaders optimize clinical cash flow and eliminate preventable denials.
-          </p>
-        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
         {/* Featured Hero Article Spotlight */}
         {featuredPost && (

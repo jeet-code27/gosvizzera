@@ -92,14 +92,14 @@ export default function Navbar() {
         <div className="px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between">
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
-            <div className="transition-transform duration-200 group-hover:scale-[1.02] dark:bg-white dark:px-2 dark:py-0.5 dark:rounded-xl inline-flex items-center">
+            <div className="transition-transform duration-200 group-hover:scale-[1.02] dark:bg-white dark:px-2.5 dark:py-1 dark:rounded-xl inline-flex items-center">
               <Image
                 src="/images/gosvizzera-logo.png"
                 alt="gosvizzera"
-                width={160}
-                height={40}
+                width={190}
+                height={48}
                 priority
-                className="h-8 sm:h-9.5 w-auto object-contain block"
+                className="h-9 sm:h-11 md:h-12 w-auto object-contain block"
               />
             </div>
           </Link>
