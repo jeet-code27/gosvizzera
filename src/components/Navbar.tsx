@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Button from "@/components/ui/Button";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -47,6 +48,7 @@ const servicesList: ServiceItem[] = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -72,6 +74,11 @@ export default function Navbar() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  // If on admin routes, do not render website navbar (placed after all hooks to follow Rules of Hooks)
+  if (pathname?.startsWith("/admin")) {
+    return null;
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4 transition-all duration-300">
@@ -178,7 +185,7 @@ export default function Navbar() {
                   <div className="col-span-2 mt-2 pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between px-2 text-xs text-slate-500 dark:text-slate-400">
                     <span>Expert Healthcare & Medical Billing Services</span>
                     <Link
-                      href="/services"
+                      href="/#services"
                       onClick={() => setIsServicesOpen(false)}
                       className="text-brand dark:text-teal-300 font-semibold hover:underline flex items-center gap-1"
                     >

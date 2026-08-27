@@ -3,6 +3,7 @@ import { Bodoni_Moda, Lato } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import AuthProvider from "@/components/providers/AuthProvider";
 
 const bodoni = Bodoni_Moda({
   variable: "--font-bodoni",
@@ -20,6 +21,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gosvizzera.com"),
   title: "gosvizzera | Healthcare RCM & Medical Billing Solutions",
   description: "Comprehensive Healthcare RCM, Medical Billing, Coding, Prior Authorization, and AR Recovery Solutions.",
 };
@@ -36,15 +38,17 @@ export default function RootLayout({
       className={`${bodoni.variable} ${lato.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans bg-background text-foreground">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem={false}
-          disableTransitionOnChange={false}
-        >
-          <Navbar />
-          <div className="flex-1">{children}</div>
-        </ThemeProvider>
+        <AuthProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem={false}
+            disableTransitionOnChange={false}
+          >
+            <Navbar />
+            <div className="flex-1">{children}</div>
+          </ThemeProvider>
+        </AuthProvider>
       </body>
     </html>
   );

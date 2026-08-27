@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronLeft, ChevronRight, Check, Loader2, ShieldCheck } from "lucide-react";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/Button";
 import {
   Card,
@@ -97,6 +98,7 @@ export default function StrategyCallForm() {
   const [currentStep, setCurrentStep] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const [formData, setFormData] = useState<StrategyCallFormData>({
     firstName: "",
@@ -127,15 +129,67 @@ export default function StrategyCallForm() {
     }
   };
 
-  const handleSubmit = (e?: React.FormEvent) => {
+  // Smoothly scroll to top when submitted
+  useEffect(() => {
+    if (isSubmitted) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [isSubmitted]);
+
+  const handleSubmit = async (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // 1. Save Lead to MongoDB Database (for Admin Panel)
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || data.error) {
+        throw new Error(data.error || "Failed to submit request");
+      }
+
+      // 2. Direct Browser-to-Web3Forms Email Trigger (bypasses Cloudflare server-side checks)
+      const web3AccessKey = "9cad453d-531f-4e5a-bba1-85ddc2b9e3df";
+      try {
+        await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            access_key: web3AccessKey,
+            subject: `🚀 New Strategy Call: ${formData.firstName} ${formData.lastName} (${formData.practiceName})`,
+            from_name: "gosvizzera Website Leads",
+            name: `${formData.firstName} ${formData.lastName}`,
+            email: formData.workEmail,
+            phone: `${formData.countryCode} ${formData.phoneNumber}`,
+            practice_name: formData.practiceName,
+            role: formData.role,
+            specialty: formData.specialty,
+            primary_service: formData.primaryService,
+            challenges: formData.challenges || "None specified",
+          }),
+        });
+      } catch (emailErr) {
+        console.warn("Client email trigger notice:", emailErr);
+      }
+
       setIsSubmitted(true);
-    }, 1200);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      toast.success("Strategy call requested successfully!");
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : "Failed to submit request";
+      toast.error(message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Validation per step
@@ -158,52 +212,56 @@ export default function StrategyCallForm() {
 
   if (isSubmitted) {
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="w-full max-w-xl mx-auto rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 sm:p-12 text-center shadow-2xl dark:shadow-black/50 space-y-6"
-      >
-        <div className="w-16 h-16 rounded-full bg-teal-50 dark:bg-teal-950/60 text-brand dark:text-teal-400 border border-teal-200 dark:border-teal-800 flex items-center justify-center mx-auto shadow-md">
-          <Check className="w-8 h-8 stroke-[2.5]" />
-        </div>
-
-        <div className="space-y-2">
-          <h3 className="font-serif text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white">
-            Strategy Session <span className="italic text-brand dark:text-teal-400 font-medium">Requested!</span>
-          </h3>
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed max-w-md mx-auto">
-            Thank you, <strong className="text-slate-900 dark:text-white font-medium">{formData.firstName} {formData.lastName}</strong>. Our healthcare revenue cycle leadership has received your request and will reach out to <strong className="text-slate-900 dark:text-white font-medium">{formData.workEmail}</strong> shortly.
-          </p>
-        </div>
-
-        <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 text-left text-xs sm:text-sm space-y-2 max-w-md mx-auto font-sans">
-          <div className="flex justify-between text-slate-600 dark:text-slate-400">
-            <span>Practice:</span>
-            <span className="font-medium text-slate-900 dark:text-white">{formData.practiceName || "Practice"}</span>
+      <div ref={containerRef} className="w-full min-h-[480px] flex items-center justify-center py-6">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="w-full max-w-xl mx-auto rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 sm:p-12 text-center shadow-2xl dark:shadow-black/50 space-y-6"
+        >
+          <div className="w-16 h-16 rounded-full bg-teal-50 dark:bg-teal-950/60 text-brand dark:text-teal-400 border border-teal-200 dark:border-teal-800 flex items-center justify-center mx-auto shadow-md">
+            <Check className="w-8 h-8 stroke-[2.5]" />
           </div>
-          <div className="flex justify-between text-slate-600 dark:text-slate-400">
-            <span>Specialty:</span>
-            <span className="font-medium text-slate-900 dark:text-white">{formData.specialty || "General"}</span>
-          </div>
-          <div className="flex justify-between text-slate-600 dark:text-slate-400">
-            <span>Service:</span>
-            <span className="font-medium text-brand dark:text-teal-300">{formData.primaryService || "Consultation"}</span>
-          </div>
-        </div>
 
-        <div className="pt-2">
-          <Button
-            onClick={() => {
-              setIsSubmitted(false);
-              setCurrentStep(0);
-            }}
-            variant="outline"
-            className="rounded-2xl"
-          >
-            Submit Another Request
-          </Button>
-        </div>
-      </motion.div>
+          <div className="space-y-2">
+            <h3 className="font-serif text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white">
+              Strategy Session <span className="italic text-brand dark:text-teal-400 font-medium">Requested!</span>
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed max-w-md mx-auto">
+              Thank you, <strong className="text-slate-900 dark:text-white font-medium">{formData.firstName} {formData.lastName}</strong>. Our healthcare revenue cycle leadership has received your request and will reach out to <strong className="text-slate-900 dark:text-white font-medium">{formData.workEmail}</strong> shortly.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 text-left text-xs sm:text-sm space-y-2 max-w-md mx-auto font-sans">
+            <div className="flex justify-between text-slate-600 dark:text-slate-400">
+              <span>Practice:</span>
+              <span className="font-medium text-slate-900 dark:text-white">{formData.practiceName || "Practice"}</span>
+            </div>
+            <div className="flex justify-between text-slate-600 dark:text-slate-400">
+              <span>Specialty:</span>
+              <span className="font-medium text-slate-900 dark:text-white">{formData.specialty || "General"}</span>
+            </div>
+            <div className="flex justify-between text-slate-600 dark:text-slate-400">
+              <span>Service:</span>
+              <span className="font-medium text-brand dark:text-teal-300">{formData.primaryService || "Consultation"}</span>
+            </div>
+          </div>
+
+          <div className="pt-2">
+            <Button
+              onClick={() => {
+                setIsSubmitted(false);
+                setCurrentStep(0);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              variant="outline"
+              className="rounded-2xl"
+            >
+              Submit Another Request
+            </Button>
+          </div>
+        </motion.div>
+      </div>
     );
   }
 

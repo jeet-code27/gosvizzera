@@ -165,7 +165,7 @@ export default function Hero() {
             </Button>
 
             <Button
-              href="/services"
+              href="#services"
               variant="outline"
               size="md"
               className="border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:border-brand dark:hover:border-teal-400 hover:text-brand dark:hover:text-teal-300 hover:bg-slate-50 dark:hover:bg-slate-800"
