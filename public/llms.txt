@@ -1,0 +1,26 @@
+# gosvizzera
+
+> Premium Healthcare Revenue Cycle Management (RCM) & Medical Billing Solutions.
+
+gosvizzera is a leading provider of end-to-end Healthcare Revenue Cycle Management (RCM), Prior Authorization, Medical Coding, Insurance Eligibility Verification, Claims Management, and Accounts Receivable (AR) Follow-up services for medical practices, healthcare facilities, and billing companies across the United States.
+
+## Core Services
+
+- [Revenue Cycle Management](https://www.gosvizzera.com/services/revenue-cycle-management): Complete end-to-end billing and financial optimization for healthcare providers.
+- [Prior & Retro Authorization](https://www.gosvizzera.com/services/prior-authorization): Streamlined insurance pre-authorizations and retroactive approval workflows.
+- [Insurance Verification](https://www.gosvizzera.com/services/insurance-verification): Real-time patient eligibility and benefit verification to eliminate upfront claim rejections.
+- [Medical Coding](https://www.gosvizzera.com/services/medical-coding): AAPC/AHIMA certified ICD-10, CPT, and HCPCS medical coding with high accuracy standards.
+- [Claims Management](https://www.gosvizzera.com/services/claims-management): High clean-claim rates, electronic claim submission, and rapid clearinghouse processing.
+- [AR Follow-up & Denial Management](https://www.gosvizzera.com/services/ar-follow-up): Systematic recovery of aged receivables and root-cause denial resolution.
+
+## Key Resources & Pages
+
+- [Home Page](https://www.gosvizzera.com): Overview of gosvizzera's solutions, stats, and client success stories.
+- [About Us](https://www.gosvizzera.com/about): Company mission, team expertise, compliance standards, and values.
+- [Healthcare Insights Blog](https://www.gosvizzera.com/blog): Expert articles, benchmarks, coding updates, and billing best practices.
+- [Book a Strategy Call](https://www.gosvizzera.com/book-a-strategy-call): Schedule a free audit and RCM strategy session.
+- [Contact Us](https://www.gosvizzera.com/contact): Direct communication channel for sales, support, and partnership inquiries.
+
+## Detailed Context
+
+- [Full LLM Specification](https://www.gosvizzera.com/llms-full.txt): Comprehensive service workflows, HIPAA compliance specs, and extended documentation for AI agents.
