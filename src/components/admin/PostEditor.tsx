@@ -719,7 +719,7 @@ export default function PostEditor({ initialData, isEdit = false }: PostEditorPr
               {editorMode === "visual" ? (
                 <EditorContent
                   editor={editor}
-                  className="prose dark:prose-invert max-w-none focus:outline-none min-h-[360px] text-slate-800 dark:text-slate-200"
+                  className="prose dark:prose-invert blog-prose max-w-none focus:outline-none min-h-[360px] text-slate-800 dark:text-slate-200"
                 />
               ) : (
                 <textarea

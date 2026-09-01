@@ -53,6 +53,7 @@ export default function ArticleContentWithTOC({ post }: PostProps) {
   const [copied, setCopied] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [readingProgress, setReadingProgress] = useState(0);
+  const [isMobileTocOpen, setIsMobileTocOpen] = useState(true);
 
   // Parse HTML for Headings & Inject IDs and Image Alt Fallbacks
   const { processedHtml, headings } = useMemo(() => {
@@ -123,7 +124,7 @@ export default function ArticleContentWithTOC({ post }: PostProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [headings]);
 
-  const shareUrl = typeof window !== "undefined" ? window.location.href : `https://gosvizzera.com/blog/${post.slug}`;
+  const shareUrl = typeof window !== "undefined" ? window.location.href : `https://www.gosvizzera.com/blog/${post.slug}`;
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(shareUrl);
@@ -173,9 +174,50 @@ export default function ArticleContentWithTOC({ post }: PostProps) {
             </p>
           </div>
 
+          {/* Mobile Table of Contents (Shown only on screens < lg, at top of article) */}
+          {headings.length > 0 && (
+            <div className="lg:hidden p-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-3">
+              <button
+                type="button"
+                onClick={() => setIsMobileTocOpen(!isMobileTocOpen)}
+                className="w-full flex items-center justify-between text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400 font-sans"
+              >
+                <div className="flex items-center gap-2">
+                  <ListTree className="w-4 h-4" />
+                  <span>Table of Contents ({headings.length})</span>
+                </div>
+                {isMobileTocOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+              </button>
+
+              {isMobileTocOpen && (
+                <nav className="space-y-1.5 pt-2 border-t border-slate-100 dark:border-slate-800 text-xs font-sans max-h-[40vh] overflow-y-auto">
+                  {headings.map((h) => {
+                    const isActive = activeHeadingId === h.id;
+                    return (
+                      <a
+                        key={h.id}
+                        href={`#${h.id}`}
+                        onClick={() => setIsMobileTocOpen(false)}
+                        className={`block py-1.5 transition-all leading-snug rounded-lg px-2 ${
+                          h.level === 3 ? "pl-5 text-[11px]" : ""
+                        } ${
+                          isActive
+                            ? "bg-teal-500/10 text-teal-700 dark:text-teal-300 font-bold border-l-2 border-brand dark:border-teal-400"
+                            : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
+                        }`}
+                      >
+                        {h.text}
+                      </a>
+                    );
+                  })}
+                </nav>
+              )}
+            </div>
+          )}
+
           {/* Render Rich-Text HTML with Enhanced Typography */}
           <div
-            className="prose prose-slate dark:prose-invert max-w-none text-slate-800 dark:text-slate-200 font-sans leading-relaxed text-sm sm:text-base prose-headings:font-serif prose-headings:font-normal prose-headings:tracking-tight prose-headings:text-slate-900 dark:prose-headings:text-white prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-slate-100 dark:prose-h2:border-slate-800/80 prose-h3:text-xl sm:prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-p:my-4 prose-p:leading-relaxed prose-a:text-brand dark:prose-a:text-teal-400 prose-a:font-semibold prose-a:underline hover:prose-a:text-teal-600 prose-blockquote:border-l-4 prose-blockquote:border-teal-500 prose-blockquote:bg-slate-50/80 dark:prose-blockquote:bg-slate-900/60 prose-blockquote:p-5 prose-blockquote:rounded-r-2xl prose-blockquote:italic prose-blockquote:text-slate-700 dark:prose-blockquote:text-slate-200 prose-img:rounded-3xl prose-img:shadow-xl prose-ul:my-5 prose-ul:space-y-2 prose-ol:my-5 prose-ol:space-y-2"
+            className="prose prose-slate dark:prose-invert blog-prose max-w-none text-slate-800 dark:text-slate-200 font-sans leading-relaxed text-sm sm:text-base prose-headings:font-serif prose-headings:font-normal prose-headings:tracking-tight prose-headings:text-slate-900 dark:prose-headings:text-white prose-h2:text-2xl sm:prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b prose-h2:border-slate-100 dark:prose-h2:border-slate-800/80 prose-h3:text-xl sm:prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3 prose-p:my-4 prose-p:leading-relaxed prose-a:text-brand dark:prose-a:text-teal-400 prose-a:font-semibold prose-a:underline hover:prose-a:text-teal-600 prose-blockquote:border-l-4 prose-blockquote:border-teal-500 prose-blockquote:bg-slate-50/80 dark:prose-blockquote:bg-slate-900/60 prose-blockquote:p-5 prose-blockquote:rounded-r-2xl prose-blockquote:italic prose-blockquote:text-slate-700 dark:prose-blockquote:text-slate-200 prose-img:rounded-3xl prose-img:shadow-xl prose-ul:my-5 prose-ul:space-y-2 prose-ol:my-5 prose-ol:space-y-2"
             dangerouslySetInnerHTML={{ __html: processedHtml }}
           />
 
