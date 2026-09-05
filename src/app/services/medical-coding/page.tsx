@@ -186,6 +186,7 @@ export default function MedicalCodingPage() {
           {/* AnimatedText Headline in Bodoni Moda */}
           <div className="pt-2">
             <AnimatedText
+              as="h1"
               text={"Medical Coding\nOutsourcing Services"}
               duration={0.035}
               delay={0.04}

@@ -91,6 +91,8 @@ const AnimatedText = React.forwardRef<HTMLDivElement, AnimatedTextProps>(
       },
     };
 
+    const MotionComponent = (motion[Component as keyof typeof motion] || motion.h1) as typeof motion.h1;
+
     return (
       <div
         ref={ref}
@@ -98,17 +100,18 @@ const AnimatedText = React.forwardRef<HTMLDivElement, AnimatedTextProps>(
         {...props}
       >
         <div className="relative inline-block">
-          <motion.div
+          <MotionComponent
             variants={container}
             initial="hidden"
             animate={replay ? "visible" : "hidden"}
+            aria-label={text.replace(/\n/g, " ")}
             className={cn(
               "font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-center text-slate-900 dark:text-white leading-[1.2] flex flex-col items-center",
               textClassName
             )}
           >
             {lines.map((line, lineIdx) => (
-              <div key={lineIdx} className="flex flex-wrap justify-center items-center">
+              <span key={lineIdx} className="flex flex-wrap justify-center items-center">
                 {Array.from(line).map((letter, letterIdx) => {
                   const currentIndex = globalIndex++;
                   return (
@@ -117,9 +120,9 @@ const AnimatedText = React.forwardRef<HTMLDivElement, AnimatedTextProps>(
                     </motion.span>
                   );
                 })}
-              </div>
+              </span>
             ))}
-          </motion.div>
+          </MotionComponent>
 
           <motion.div
             variants={lineVariants}

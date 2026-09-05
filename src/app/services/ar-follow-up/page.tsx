@@ -259,6 +259,7 @@ export default function ARFollowUpPage() {
           {/* AnimatedText Headline in Bodoni Moda */}
           <div className="pt-2">
             <AnimatedText
+              as="h1"
               text={"Accounts Receivable Management\n& AR Follow-Up Services"}
               duration={0.035}
               delay={0.04}

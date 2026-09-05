@@ -19,31 +19,17 @@ export default function BlogHero() {
           Industry Knowledge & Insights
         </motion.div>
 
-        {/* AnimatedText Headline with Responsive Line Breaks */}
+        {/* AnimatedText Headline as H1 */}
         <div className="pt-2">
-          {/* Mobile view (3 lines) */}
-          <div className="block sm:hidden">
-            <AnimatedText
-              text={"Healthcare Insights\n& Expert\nPerspectives"}
-              duration={0.035}
-              delay={0.04}
-              underlineGradient="from-teal-400 via-brand to-emerald-400"
-              underlineHeight="h-1"
-              underlineOffset="-bottom-2"
-            />
-          </div>
-
-          {/* Desktop & Tablet view (2 lines) */}
-          <div className="hidden sm:block">
-            <AnimatedText
-              text={"Healthcare Insights\n& Expert Perspectives"}
-              duration={0.035}
-              delay={0.04}
-              underlineGradient="from-teal-400 via-brand to-emerald-400"
-              underlineHeight="h-1 sm:h-1.5"
-              underlineOffset="-bottom-2.5 sm:-bottom-3.5"
-            />
-          </div>
+          <AnimatedText
+            as="h1"
+            text={"Healthcare RCM Insights\n& Expert Perspectives"}
+            duration={0.035}
+            delay={0.04}
+            underlineGradient="from-teal-400 via-brand to-emerald-400"
+            underlineHeight="h-1 sm:h-1.5"
+            underlineOffset="-bottom-2.5 sm:-bottom-3.5"
+          />
         </div>
 
         {/* Subtitle */}

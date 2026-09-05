@@ -259,7 +259,8 @@ export default function RevenueCycleManagementPage() {
           {/* AnimatedText Headline in Bodoni Moda */}
           <div className="pt-2">
             <AnimatedText
-              text={"Revenue Cycle Management\nServices"}
+              as="h1"
+              text={"Healthcare Revenue Cycle\nManagement Services"}
               duration={0.035}
               delay={0.04}
               underlineGradient="from-teal-400 via-brand to-emerald-400"

@@ -120,7 +120,8 @@ export default function Hero() {
           {/* Main Animated Headline */}
           <div className="pt-1">
             <AnimatedText
-              text={"Precision in RCM.\nExcellence in Results."}
+              as="h1"
+              text={"Healthcare RCM &\nMedical Billing Services"}
               duration={0.03}
               delay={0.035}
               textClassName="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-normal tracking-tight leading-[1.18]"

@@ -131,6 +131,7 @@ export default function InsuranceVerificationPage() {
           {/* AnimatedText Headline */}
           <div className="pt-2">
             <AnimatedText
+              as="h1"
               text={"Insurance Verification\n& Eligibility Services"}
               duration={0.035}
               delay={0.04}

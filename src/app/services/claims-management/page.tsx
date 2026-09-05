@@ -260,6 +260,7 @@ export default function ClaimsManagementPage() {
           {/* AnimatedText Headline in Bodoni Moda */}
           <div className="pt-2">
             <AnimatedText
+              as="h1"
               text={"Claims Management &\nDenial Prevention Services"}
               duration={0.035}
               delay={0.04}

@@ -114,6 +114,7 @@ export default function PriorAuthorizationPage() {
           {/* AnimatedText Headline in Bodoni Moda */}
           <div className="pt-2">
             <AnimatedText
+              as="h1"
               text={"Prior & Retro Authorization\nOutsourcing Services"}
               duration={0.035}
               delay={0.04}

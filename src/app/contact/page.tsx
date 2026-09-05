@@ -25,7 +25,8 @@ export default function ContactPage() {
           {/* AnimatedText Headline with Spring Effect & Underline */}
           <div className="pt-1">
             <AnimatedText
-              text={"Book a Strategy Call"}
+              as="h1"
+              text={"Book a Healthcare RCM\nStrategy Call"}
               duration={0.035}
               delay={0.04}
               underlineGradient="from-teal-400 via-brand to-emerald-400"
