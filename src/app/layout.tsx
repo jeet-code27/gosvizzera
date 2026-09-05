@@ -22,8 +22,83 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://gosvizzera.com"),
-  title: "gosvizzera | Healthcare RCM & Medical Billing Solutions",
-  description: "Comprehensive Healthcare RCM, Medical Billing, Coding, Prior Authorization, and AR Recovery Solutions.",
+  title: {
+    default: "Healthcare RCM & Medical Billing Services | Svizzera",
+    template: "%s",
+  },
+  description:
+    "Svizzera provides end-to-end healthcare RCM outsourcing, including prior authorization, medical coding, insurance verification, and revenue cycle management for US practices.",
+  keywords: [
+    "Healthcare RCM",
+    "Medical Billing Services",
+    "Healthcare RCM Outsourcing",
+    "Prior Authorization",
+    "Medical Coding",
+    "Insurance Verification",
+    "Revenue Cycle Management",
+    "US Medical Practices",
+    "Denial Management",
+    "Accounts Receivable Recovery",
+    "Svizzera",
+  ],
+  authors: [{ name: "Svizzera" }],
+  creator: "Svizzera",
+  publisher: "Svizzera",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://gosvizzera.com",
+    title: "Healthcare RCM & Medical Billing Services | Svizzera",
+    description:
+      "Svizzera provides end-to-end healthcare RCM outsourcing, including prior authorization, medical coding, insurance verification, and revenue cycle management for US practices.",
+    siteName: "Svizzera",
+    images: [
+      {
+        url: "/images/gosvizzera-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Svizzera Healthcare RCM & Medical Billing Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Healthcare RCM & Medical Billing Services | Svizzera",
+    description:
+      "Svizzera provides end-to-end healthcare RCM outsourcing, including prior authorization, medical coding, insurance verification, and revenue cycle management for US practices.",
+    images: ["/images/gosvizzera-logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Svizzera Healthcare Solutions",
+  url: "https://gosvizzera.com",
+  logo: "https://gosvizzera.com/images/gosvizzera-logo.png",
+  sameAs: [
+    "https://www.linkedin.com/company/svizzera-healthcare/",
+    "https://www.facebook.com/people/Svizzera-Healthcare/61593771781722/",
+    "https://www.instagram.com/svizzerahealthcare",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+1-469-403-5472",
+    contactType: "customer service",
+    email: "info@gosvizzera.com",
+    areaServed: "US",
+  },
 };
 
 export default function RootLayout({
@@ -37,6 +112,12 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${bodoni.variable} ${lato.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col font-sans bg-background text-foreground">
         <AuthProvider>
           <ThemeProvider

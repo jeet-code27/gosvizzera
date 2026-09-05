@@ -147,6 +147,11 @@ export default async function SingleBlogPage({ params }: PageProps) {
         "@type": "ImageObject",
         url: "https://gosvizzera.com/images/gosvizzera-logo.png",
       },
+      sameAs: [
+        "https://www.linkedin.com/company/svizzera-healthcare/",
+        "https://www.facebook.com/people/Svizzera-Healthcare/61593771781722/",
+        "https://www.instagram.com/svizzerahealthcare",
+      ],
     },
     mainEntityOfPage: {
       "@type": "WebPage",
