@@ -16,6 +16,16 @@ interface ServiceItem {
 
 const servicesList: ServiceItem[] = [
   {
+    title: "Medical Billing Services",
+    href: "/services/medical-billing-services",
+    description: "Cleaner claims, faster payments & fewer denials for U.S. practices.",
+  },
+  {
+    title: "Medical Billing Outsourcing",
+    href: "/services/medical-billing-outsourcing",
+    description: "Outsource billing without changing your EHR, staff, or control.",
+  },
+  {
     title: "Insurance Verification",
     href: "/services/insurance-verification",
     description: "Real-time eligibility & benefits validation to prevent denials.",
@@ -39,6 +49,11 @@ const servicesList: ServiceItem[] = [
     title: "Claims Management",
     href: "/services/claims-management",
     description: "Clean claim submissions and proactive rejection handling.",
+  },
+  {
+    title: "Denial Management",
+    href: "/services/denial-management",
+    description: "Root-cause denial analysis, first-level appeals & prevention.",
   },
   {
     title: "AR Follow-Up",
@@ -146,7 +161,7 @@ export default function Navbar() {
 
               {/* Mega Dropdown Panel */}
               <div
-                className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[540px] transition-all duration-200 ease-out origin-top ${
+                className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[560px] transition-all duration-200 ease-out origin-top ${
                   isServicesOpen
                     ? "opacity-100 scale-100 pointer-events-auto"
                     : "opacity-0 scale-95 pointer-events-none"

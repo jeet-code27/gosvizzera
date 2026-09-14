@@ -5,33 +5,48 @@ gosvizzera delivers full-spectrum Revenue Cycle Management (RCM) and Healthcare 
 
 ## Key Solutions Breakdown
 
-### 1. Revenue Cycle Management (RCM)
+### 1. Medical Billing Services
+- URL: https://www.gosvizzera.com/services/medical-billing-services
+- Features: Full-service billing lifecycle from patient registration and insurance verification through medical coding, charge entry, claim submission, payment posting, denial management, and accounts receivable follow-up.
+- Impact: 98%+ first-pass clean claim rate, certified AAPC/AHIMA coders, 1-hour response commitment, fewer avoidable denials.
+
+### 2. Medical Billing Outsourcing
+- URL: https://www.gosvizzera.com/services/medical-billing-outsourcing
+- Features: Outsource billing without disrupting existing EHRs (Epic, Cerner, Athenahealth, eClinicalWorks, NextGen, AdvancedMD) or clinical staff. BAA-first onboarding within 5–10 business days.
+- Impact: Seamless operational continuity, weekly A/R follow-up, scalable capacity without internal hiring overhead.
+
+### 3. Revenue Cycle Management (RCM)
 - URL: https://www.gosvizzera.com/services/revenue-cycle-management
 - Features: End-to-end charge capture, patient registration, charge entry, payment posting, credentialing, financial reporting, and revenue analytics.
 - Impact: Increased net revenue, reduced Days in AR (Days Sales Outstanding), transparent financial dashboards.
 
-### 2. Prior & Retroactive Authorization
+### 4. Prior & Retroactive Authorization
 - URL: https://www.gosvizzera.com/services/prior-authorization
 - URL: https://www.gosvizzera.com/services/prior-and-retro-authorization
 - Features: Payer policy tracking, automated pre-auth submissions, peer-to-peer review scheduling, emergency retro-authorizations.
 - Impact: Zero authorization-related claim denials, reduced administrative burden on clinical staff.
 
-### 3. Insurance Eligibility & Benefits Verification
+### 5. Insurance Eligibility & Benefits Verification
 - URL: https://www.gosvizzera.com/services/insurance-verification
 - Features: Real-time electronic verification, primary/secondary/tertiary coverage determination, co-pay/deductible calculation, pre-visit benefit checks.
 - Impact: Prevention of front-desk errors and immediate reduction in eligibility denials.
 
-### 4. Medical Coding & Audit Services
+### 6. Medical Coding & Audit Services
 - URL: https://www.gosvizzera.com/services/medical-coding
 - Features: Certified coders (CPC, CCS), ICD-10-CM/PCS, CPT, HCPCS Level II coding, E/M coding audits, modifier application, clinical documentation improvement (CDI).
 - Impact: Full compliance, minimal audit risk, max reimbursement for delivered services.
 
-### 5. Claims Management & Clearinghouse Scrubbing
+### 7. Claims Management & Clearinghouse Scrubbing
 - URL: https://www.gosvizzera.com/services/claims-management
 - Features: Custom clearinghouse scrubbing rules, 98%+ clean claim rate, electronic remits (ERA/835), fast re-submission of rejected claims.
 - Impact: Faster turnaround times (TAT) and lower cost per clean claim.
 
-### 6. Accounts Receivable (AR) Follow-up & Denial Management
+### 8. Medical Claim Denial Management Services
+- URL: https://www.gosvizzera.com/services/denial-management
+- Features: Root-cause denial tracing, CARC/RARC analysis, formal first-level appeals, peer-to-peer coordination, and upstream prevention loops.
+- Impact: Recovery of eligible revenue, elimination of recurring denial causes, lower overall denial rate.
+
+### 9. Accounts Receivable (AR) Follow-up & Recovery
 - URL: https://www.gosvizzera.com/services/ar-follow-up
 - Features: Aged AR recovery (>30, >60, >90, >120 days), denial root-cause analysis, appeal letter generation, payer escalation workflows.
 - Impact: Maximum recovery of uncollected revenue, reduced write-offs.

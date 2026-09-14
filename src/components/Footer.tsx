@@ -18,11 +18,14 @@ export default function Footer() {
   };
 
   const services = [
+    { name: "Medical Billing Services", href: "/services/medical-billing-services" },
+    { name: "Medical Billing Outsourcing", href: "/services/medical-billing-outsourcing" },
     { name: "Insurance Verification", href: "/services/insurance-verification" },
     { name: "Prior Authorization", href: "/services/prior-authorization" },
     { name: "Medical Coding (CPT / ICD-10)", href: "/services/medical-coding" },
     { name: "Revenue Cycle Management", href: "/services/revenue-cycle-management" },
     { name: "Claims Management & Scrubbing", href: "/services/claims-management" },
+    { name: "Denial Management & Appeals", href: "/services/denial-management" },
     { name: "Aged AR Follow-Up & Recovery", href: "/services/ar-follow-up" },
   ];
 

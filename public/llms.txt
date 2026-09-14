@@ -6,12 +6,15 @@ gosvizzera is a leading provider of end-to-end Healthcare Revenue Cycle Manageme
 
 ## Core Services
 
+- [Medical Billing Services](https://www.gosvizzera.com/services/medical-billing-services): Full-service medical billing for physician practices with 98%+ clean claims and faster reimbursements.
+- [Medical Billing Outsourcing](https://www.gosvizzera.com/services/medical-billing-outsourcing): Outsource medical billing without disrupting existing EHR systems, staff, or operational control.
 - [Revenue Cycle Management](https://www.gosvizzera.com/services/revenue-cycle-management): Complete end-to-end billing and financial optimization for healthcare providers.
 - [Prior & Retro Authorization](https://www.gosvizzera.com/services/prior-authorization): Streamlined insurance pre-authorizations and retroactive approval workflows.
 - [Insurance Verification](https://www.gosvizzera.com/services/insurance-verification): Real-time patient eligibility and benefit verification to eliminate upfront claim rejections.
 - [Medical Coding](https://www.gosvizzera.com/services/medical-coding): AAPC/AHIMA certified ICD-10, CPT, and HCPCS medical coding with high accuracy standards.
 - [Claims Management](https://www.gosvizzera.com/services/claims-management): High clean-claim rates, electronic claim submission, and rapid clearinghouse processing.
-- [AR Follow-up & Denial Management](https://www.gosvizzera.com/services/ar-follow-up): Systematic recovery of aged receivables and root-cause denial resolution.
+- [Denial Management Services](https://www.gosvizzera.com/services/denial-management): Root-cause denial management, first-level appeals, and continuous prevention loops.
+- [AR Follow-up & Recovery](https://www.gosvizzera.com/services/ar-follow-up): Systematic recovery of aged receivables and active payer escalation.
 
 ## Key Resources & Pages
 
