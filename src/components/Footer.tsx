@@ -27,6 +27,7 @@ export default function Footer() {
     { name: "Claims Management & Scrubbing", href: "/services/claims-management" },
     { name: "Denial Management & Appeals", href: "/services/denial-management" },
     { name: "Aged AR Follow-Up & Recovery", href: "/services/ar-follow-up" },
+    { name: "Chiropractic Billing Services", href: "/services/chiropractic-billing" },
   ];
 
   const specialties = [
@@ -36,6 +37,7 @@ export default function Footer() {
     { name: "Wound Care & Debridement", href: "#specialties" },
     { name: "Gastroenterology (GI)", href: "#specialties" },
     { name: "Behavioral & Mental Health", href: "#specialties" },
+    { name: "Chiropractic Care", href: "/services/chiropractic-billing" },
     { name: "Urgent Care & Multi-Specialty", href: "#specialties" },
   ];
 

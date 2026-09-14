@@ -60,6 +60,11 @@ const servicesList: ServiceItem[] = [
     href: "/services/ar-follow-up",
     description: "Accelerate aged accounts receivable recovery and cash flow.",
   },
+  {
+    title: "Chiropractic Billing",
+    href: "/services/chiropractic-billing",
+    description: "Visit-limit tracking, Medicare ABN compliance & denial recovery.",
+  },
 ];
 
 export default function Navbar() {

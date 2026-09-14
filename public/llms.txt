@@ -15,6 +15,7 @@ gosvizzera is a leading provider of end-to-end Healthcare Revenue Cycle Manageme
 - [Claims Management](https://www.gosvizzera.com/services/claims-management): High clean-claim rates, electronic claim submission, and rapid clearinghouse processing.
 - [Denial Management Services](https://www.gosvizzera.com/services/denial-management): Root-cause denial management, first-level appeals, and continuous prevention loops.
 - [AR Follow-up & Recovery](https://www.gosvizzera.com/services/ar-follow-up): Systematic recovery of aged receivables and active payer escalation.
+- [Chiropractic Billing Services](https://www.gosvizzera.com/services/chiropractic-billing): Payer visit-limit tracking, Medicare ABN compliance, and denial prevention for chiropractic practices.
 
 ## Key Resources & Pages
 

@@ -51,6 +51,11 @@ gosvizzera delivers full-spectrum Revenue Cycle Management (RCM) and Healthcare 
 - Features: Aged AR recovery (>30, >60, >90, >120 days), denial root-cause analysis, appeal letter generation, payer escalation workflows.
 - Impact: Maximum recovery of uncollected revenue, reduced write-offs.
 
+### 10. Chiropractic Billing Services
+- URL: https://www.gosvizzera.com/services/chiropractic-billing
+- Features: Payer visit-limit tracking, Medicare Part B spinal manipulation compliance, Advance Beneficiary Notice (ABN) documentation, first-level medical necessity appeals, CMT (98940–98943) and physical modality coding.
+- Impact: Elimination of surprise benefit-cap rejections, compliant Medicare billing, reduced patient balance disputes.
+
 ## Compliance & Security
 - 100% HIPAA (Health Insurance Portability and Accountability Act) compliant processes.
 - Encrypted data transfer (TLS 1.3) and secure cloud infrastructure.
