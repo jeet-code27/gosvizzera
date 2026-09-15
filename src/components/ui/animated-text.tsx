@@ -110,18 +110,34 @@ const AnimatedText = React.forwardRef<HTMLDivElement, AnimatedTextProps>(
               textClassName
             )}
           >
-            {lines.map((line, lineIdx) => (
-              <span key={lineIdx} className="flex flex-wrap justify-center items-center">
-                {Array.from(line).map((letter, letterIdx) => {
-                  const currentIndex = globalIndex++;
-                  return (
-                    <motion.span key={currentIndex} variants={child} className="inline-block">
-                      {letter === " " ? "\u00A0" : letter}
-                    </motion.span>
-                  );
-                })}
-              </span>
-            ))}
+            {lines.map((line, lineIdx) => {
+              const words = line.split(" ");
+              return (
+                <span key={lineIdx} className="flex flex-wrap justify-center items-center">
+                  {words.map((word, wordIdx) => (
+                    <span key={wordIdx} className="inline-block whitespace-nowrap">
+                      {Array.from(word).map((letter) => {
+                        const currentIndex = globalIndex++;
+                        return (
+                          <motion.span key={currentIndex} variants={child} className="inline-block">
+                            {letter}
+                          </motion.span>
+                        );
+                      })}
+                      {wordIdx < words.length - 1 && (
+                        <motion.span
+                          key={`space-${globalIndex++}`}
+                          variants={child}
+                          className="inline-block"
+                        >
+                          {"\u00A0"}
+                        </motion.span>
+                      )}
+                    </span>
+                  ))}
+                </span>
+              );
+            })}
           </MotionComponent>
 
           <motion.div

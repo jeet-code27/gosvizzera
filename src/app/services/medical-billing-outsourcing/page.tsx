@@ -346,10 +346,10 @@ export default function MedicalBillingOutsourcingPage() {
               Outsource medical billing without disrupting your EHR, staff, or control.
             </p>
             <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed">
-              Outsourcing your medical billing should not mean rebuilding your practice from scratch. Svizzera Healthcare provides medical billing outsourcing designed to work around your existing workflow, staff, and technology while giving your practice access to specialised billing and revenue cycle expertise.
+              Outsourcing your medical billing shouldn&apos;t mean changing your entire practice. Svizzera works with your existing workflow, staff, and technology, providing specialized billing and revenue cycle expertise to improve efficiency, accuracy, and collections.
             </p>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-sans font-light leading-relaxed">
-              If you are asking, <strong className="text-slate-700 dark:text-slate-200 font-medium">“Should I outsource medical billing?”</strong>, the decision usually comes down to three things: whether your current billing process is performing well, whether your internal team has the capacity to manage it, and whether an experienced external partner can take work off your team without sacrificing visibility.
+              If you are considering outsourcing your medical billing, the decision should be based on three key factors: the effectiveness of your current billing process, your internal team&apos;s capacity, and whether an experienced billing partner can enhance revenue cycle performance while maintaining transparency, accuracy, and control.
             </p>
           </motion.div>
 
