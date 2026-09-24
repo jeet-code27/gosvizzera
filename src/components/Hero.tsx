@@ -103,7 +103,7 @@ export default function Hero() {
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-teal-600 dark:bg-teal-400" />
             </span>
             <span className="text-[11px] sm:text-xs font-semibold tracking-wide font-sans uppercase">
-              Trusted Healthcare Outsourcing Partner
+              Trusted Health Care Partner
             </span>
           </motion.div>
 
@@ -114,7 +114,7 @@ export default function Hero() {
             transition={{ duration: 0.45, ease: "easeOut", delay: 0.08 }}
             className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500 font-sans"
           >
-            Healthcare Outsourcing Services
+            HealthCare Services
           </motion.div>
 
           {/* Main Animated Headline */}
