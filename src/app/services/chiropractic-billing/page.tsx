@@ -690,6 +690,7 @@ export default function ChiropracticBillingPage() {
           highlightedTitle="Questions"
           description="Essential questions regarding chiropractic billing codes, Medicare coverage, visit limits, and denials."
           items={chiropracticFaqs}
+          generateSchema={false}
         />
       </section>
 

@@ -1005,6 +1005,7 @@ export default function MedicalBillingServicesPage() {
           highlightedTitle="Questions"
           description="Detailed answers to common questions practice administrators and physicians ask regarding Svizzera's medical billing services."
           items={medicalBillingFaqs}
+          generateSchema={false}
         />
       </section>
 

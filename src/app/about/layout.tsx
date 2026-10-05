@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     "Svizzera",
   ],
   alternates: {
-    canonical: "https://www.gosvizzera.com/about",
+    canonical: "https://gosvizzera.com/about",
   },
   openGraph: {
     title: "About Svizzera Healthcare Solutions | RCM Experts",
     description:
       "Svizzera brings 5+ years of healthcare RCM experience, 30+ specialties, HIPAA-focused workflows, and 98.7% clean claims accuracy for US medical practices.",
-    url: "https://www.gosvizzera.com/about",
+    url: "https://gosvizzera.com/about",
     siteName: "Svizzera",
     type: "website",
     images: [

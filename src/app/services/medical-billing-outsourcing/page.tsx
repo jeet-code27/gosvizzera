@@ -1079,6 +1079,7 @@ export default function MedicalBillingOutsourcingPage() {
           highlightedTitle="Questions"
           description="Straightforward answers regarding control, EHR compatibility, HIPAA compliance, onboarding timelines, and costs."
           items={outsourcingFaqs}
+          generateSchema={false}
         />
       </section>
 

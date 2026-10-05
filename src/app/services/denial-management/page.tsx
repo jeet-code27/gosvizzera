@@ -944,6 +944,7 @@ export default function DenialManagementPage() {
           highlightedTitle="Questions"
           description="Direct answers on root-cause analysis, appeals, A/R differences, benchmarks, and denial prevention."
           items={denialManagementFaqs}
+          generateSchema={false}
         />
       </section>
 

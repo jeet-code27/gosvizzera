@@ -5,7 +5,7 @@ import Post from "@/lib/models/Post";
 export const revalidate = 60; // ISR revalidate every 60 seconds
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://www.gosvizzera.com";
+  const baseUrl = "https://gosvizzera.com";
 
   // Static routes configuration
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -41,12 +41,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${baseUrl}/services/prior-authorization`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/prior-and-retro-authorization`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,

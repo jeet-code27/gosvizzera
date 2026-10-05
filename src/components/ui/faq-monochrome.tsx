@@ -80,6 +80,7 @@ interface FAQProps {
   highlightedTitle?: string;
   description?: string;
   items?: FAQItem[];
+  generateSchema?: boolean;
 }
 
 export function FAQSection({
@@ -88,6 +89,7 @@ export function FAQSection({
   highlightedTitle = "Questions",
   description = "Answers to the most common questions healthcare organizations ask before partnering with Svizzera.",
   items = defaultInsuranceFaqs,
+  generateSchema = true,
 }: FAQProps) {
   const [introReady, setIntroReady] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
@@ -237,6 +239,25 @@ export function FAQSection({
 
   return (
     <div className="relative w-full overflow-hidden bg-transparent transition-colors duration-300">
+      {generateSchema && items && items.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: items.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: item.answer,
+                },
+              })),
+            }),
+          }}
+        />
+      )}
       <section className="relative z-10 mx-auto flex max-w-4xl flex-col gap-10 sm:gap-12 px-4 sm:px-6 py-16 sm:py-24 lg:max-w-5xl">
         {/* Animated Signal Pill */}
         <div className={`faq1-intro ${introReady ? "faq1-intro--active" : ""}`}>
