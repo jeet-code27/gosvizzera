@@ -155,6 +155,19 @@ export default async function SingleBlogPage({ params }: PageProps) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const post = JSON.parse(JSON.stringify(postRaw)) as any;
 
+  // Fallback to static post content/faqs/pdf if DB content is empty
+  if ((!post.content || post.content.trim() === "") && staticPosts[canonicalSlug]) {
+    post.content = staticPosts[canonicalSlug].content;
+    if (!post.faqs || post.faqs.length === 0) {
+      post.faqs = staticPosts[canonicalSlug].faqs;
+    }
+    if (!post.pdfUrl) {
+      post.pdfUrl = staticPosts[canonicalSlug].pdfUrl;
+      post.pdfName = staticPosts[canonicalSlug].pdfName;
+      post.pdfSize = staticPosts[canonicalSlug].pdfSize;
+    }
+  }
+
   // Fetch 3 related posts if not manually selected
   let relatedArticles = post.relatedPosts || [];
   if (relatedArticles.length === 0 && post.category && post.category.length > 0) {
