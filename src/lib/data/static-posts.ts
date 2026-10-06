@@ -212,22 +212,22 @@ export const staticPosts: Record<string, StaticPost> = {
       <p>This comprehensive guide explains how to make that decision using financial data, revenue-cycle benchmarks, staffing costs, security requirements and operational risk rather than simply comparing vendor fees.</p>
 
       <!-- PDF Download Highlight Box -->
-      <div class="my-10 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900 text-white shadow-xl border border-teal-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="not-prose my-10 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900 !text-white text-white shadow-xl border border-teal-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="space-y-2 text-center md:text-left">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold uppercase tracking-wider">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold uppercase tracking-wider font-sans">
             📄 Executive PDF Edition
           </span>
-          <h3 class="font-serif text-xl sm:text-2xl font-bold text-white">
+          <h3 class="font-serif text-xl sm:text-2xl font-bold !text-white text-white">
             Download the 2026 RCM Benchmarks & Guide
           </h3>
-          <p class="text-xs sm:text-sm text-slate-300 max-w-xl font-light">
+          <p class="text-xs sm:text-sm !text-slate-200 text-slate-200 max-w-xl font-light font-sans">
             Take this full 2026 framework offline — complete with MGMA benchmark tables, in-house vs. outsourced cost calculators, and the 15-point vendor evaluation matrix.
           </p>
         </div>
         <a
-          href="/article-pdf/Svizzera_Medical_Billing_Benchmarks_2026_guide.pdf"
-          download="Svizzera_Medical_Billing_Benchmarks_2026_guide.pdf"
-          class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-sm tracking-wide shadow-lg hover:shadow-teal-500/25 transition-all transform hover:-translate-y-0.5 flex-shrink-0"
+          href="/article-pdf/Svizzera_2026_US_Medical_Billing_RCM_Benchmark_Report.pdf"
+          download="Svizzera_2026_US_Medical_Billing_RCM_Benchmark_Report.pdf"
+          class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-sm tracking-wide shadow-lg hover:shadow-teal-500/25 transition-all transform hover:-translate-y-0.5 flex-shrink-0 font-sans"
         >
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -762,15 +762,15 @@ export const staticPosts: Record<string, StaticPost> = {
       <p>A high-performing internal revenue cycle may be worth protecting. A poorly performing one can quietly cost far more than the fee required to fix it.</p>
 
       <!-- Bottom PDF Download & Audit Callout -->
-      <div class="my-10 p-8 rounded-3xl bg-slate-900 text-white border border-teal-500/30 space-y-6 shadow-2xl">
+      <div class="not-prose my-10 p-8 rounded-3xl bg-slate-900 !text-white text-white border border-teal-500/30 space-y-6 shadow-2xl">
         <div class="space-y-2">
           <span class="text-xs font-bold uppercase tracking-wider text-teal-400 font-sans">
             Free Practice Assessment & PDF Download
           </span>
-          <h3 class="font-serif text-2xl sm:text-3xl font-bold">
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold !text-white text-white">
             Ready to Uncover Where Your Revenue Is Leaking?
           </h3>
-          <p class="text-sm text-slate-300 font-sans font-light max-w-2xl">
+          <p class="text-sm !text-slate-200 text-slate-200 font-sans font-light max-w-2xl">
             Download our complete 2026 RCM Benchmarks Guide or schedule a confidential, zero-obligation billing audit with Svizzera's senior billing advisory team.
           </p>
         </div>
@@ -1294,15 +1294,15 @@ export const staticPosts: Record<string, StaticPost> = {
       </ul>
 
       <!-- Bottom PDF Download & Audit Callout -->
-      <div class="my-10 p-8 rounded-3xl bg-slate-900 text-white border border-teal-500/30 space-y-6 shadow-2xl">
+      <div class="not-prose my-10 p-8 rounded-3xl bg-slate-900 !text-white text-white border border-teal-500/30 space-y-6 shadow-2xl">
         <div class="space-y-2">
           <span class="text-xs font-bold uppercase tracking-wider text-teal-400 font-sans">
-            Free 2026 Benchmark Guide PDF Download
+            FREE 2026 BENCHMARK GUIDE PDF DOWNLOAD
           </span>
-          <h3 class="font-serif text-2xl sm:text-3xl font-bold">
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold !text-white text-white">
             Download the Complete Four-Silo Benchmark Guide
           </h3>
-          <p class="text-sm text-slate-300 font-sans font-light max-w-2xl">
+          <p class="text-sm !text-slate-200 text-slate-200 font-sans font-light max-w-2xl">
             Save this complete scorecard, CMS-0057-F compliance checklists, and monthly self-audit formulas in a high-resolution PDF for internal clinic training.
           </p>
         </div>

@@ -124,7 +124,7 @@ body {
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--border);
-  color: var(--foreground);
+  color: inherit;
 }
 
 .blog-prose h3 {
@@ -132,7 +132,27 @@ body {
   font-size: 1.35rem;
   margin-top: 1.75rem;
   margin-bottom: 0.75rem;
-  color: var(--foreground);
+  color: inherit;
+}
+
+/* Ensure headings & text inside dark banner cards always stay crystal-clear white in light mode */
+.blog-prose .text-white,
+.blog-prose [class*="text-white"],
+.blog-prose [class*="bg-slate-900"] h2,
+.blog-prose [class*="bg-slate-900"] h3,
+.blog-prose [class*="bg-slate-900"] h4,
+.blog-prose [class*="bg-teal-950"] h2,
+.blog-prose [class*="bg-teal-950"] h3,
+.blog-prose [class*="bg-teal-950"] h4,
+.blog-prose .not-prose h2,
+.blog-prose .not-prose h3,
+.blog-prose .not-prose h4 {
+  color: #ffffff !important;
+}
+
+.blog-prose [class*="bg-slate-900"] p,
+.blog-prose [class*="bg-teal-950"] p {
+  color: #cbd5e1 !important;
 }
 
 .blog-prose ul {
