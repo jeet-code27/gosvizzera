@@ -135,24 +135,57 @@ body {
   color: inherit;
 }
 
-/* Ensure headings & text inside dark banner cards always stay crystal-clear white in light mode */
-.blog-prose .text-white,
-.blog-prose [class*="text-white"],
+/* Ensure headings & text inside dark banner cards always stay crystal-clear white in both light and dark mode */
 .blog-prose [class*="bg-slate-900"] h2,
 .blog-prose [class*="bg-slate-900"] h3,
 .blog-prose [class*="bg-slate-900"] h4,
 .blog-prose [class*="bg-teal-950"] h2,
 .blog-prose [class*="bg-teal-950"] h3,
 .blog-prose [class*="bg-teal-950"] h4,
-.blog-prose .not-prose h2,
-.blog-prose .not-prose h3,
-.blog-prose .not-prose h4 {
+.blog-prose .not-prose[class*="bg-slate-900"] h2,
+.blog-prose .not-prose[class*="bg-slate-900"] h3,
+.blog-prose .not-prose[class*="bg-slate-900"] h4 {
   color: #ffffff !important;
 }
 
 .blog-prose [class*="bg-slate-900"] p,
-.blog-prose [class*="bg-teal-950"] p {
+.blog-prose [class*="bg-teal-950"] p,
+.blog-prose .not-prose[class*="bg-slate-900"] p {
   color: #cbd5e1 !important;
+}
+
+/* Explicit Table Typography & Visibility Rules for Light & Dark Mode */
+.blog-prose table thead {
+  background-color: #f1f5f9;
+}
+:is(.dark) .blog-prose table thead {
+  background-color: rgba(15, 23, 42, 0.85);
+}
+.blog-prose table thead th {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+:is(.dark) .blog-prose table thead th {
+  color: #ffffff !important;
+}
+.blog-prose table tbody tr td:first-child {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+:is(.dark) .blog-prose table tbody tr td:first-child {
+  color: #ffffff !important;
+}
+.blog-prose table tbody tr td {
+  color: #334155 !important;
+}
+:is(.dark) .blog-prose table tbody tr td {
+  color: #cbd5e1 !important;
+}
+.blog-prose table tbody tr td a {
+  color: #0d9488 !important;
+}
+:is(.dark) .blog-prose table tbody tr td a {
+  color: #2dd4bf !important;
 }
 
 .blog-prose ul {
