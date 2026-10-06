@@ -35,6 +35,12 @@ function resolveSlug(rawSlug: string): string {
   ) {
     return "medical-billing-outsourcing-rcm-guide";
   }
+  if (
+    rawSlug === "medical-billing-benchmarks-2026-the-four-silo-guide" ||
+    rawSlug === "four-silo-guide-medical-billing-benchmarks-2026"
+  ) {
+    return "medical-billing-benchmarks-2026";
+  }
   return rawSlug;
 }
 
