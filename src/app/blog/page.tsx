@@ -9,6 +9,7 @@ import { Calendar, Clock, ArrowRight, Star } from "lucide-react";
 import BlogHero from "@/components/blog/BlogHero";
 import BlogClientView from "@/components/blog/BlogClientView";
 import Footer from "@/components/Footer";
+import { staticPosts } from "@/lib/data/static-posts";
 
 export const metadata: Metadata = {
   title: "Healthcare RCM & Medical Billing Insights | gosvizzera Blog",
@@ -53,6 +54,23 @@ export default async function BlogPage() {
   const posts = JSON.parse(JSON.stringify(postsRaw)) as any[];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const categories = JSON.parse(JSON.stringify(categoriesRaw)) as any[];
+
+  // Merge static posts (e.g. pillar guide) if not already in DB
+  const staticList = Object.values(staticPosts);
+  for (const sp of staticList) {
+    if (!posts.some((p) => p.slug === sp.slug)) {
+      posts.unshift(sp);
+    }
+  }
+
+  if (categories.length === 0) {
+    categories.push(
+      { _id: "cat-rcm-strategy", name: "Revenue Cycle Management", slug: "revenue-cycle-management" },
+      { _id: "cat-prior-auth", name: "Prior & Retro Authorization", slug: "prior-authorization" },
+      { _id: "cat-coding", name: "Medical Coding & Compliance", slug: "medical-coding" },
+      { _id: "cat-denial", name: "Denial Management", slug: "denial-prevention" }
+    );
+  }
 
   // Find featured post or latest post
   const featuredPost = posts.find((p) => p.isFeatured) || posts[0] || null;
@@ -159,7 +177,7 @@ export default async function BlogPage() {
         )}
 
         {/* Client-Side Category Filtering & Live Search Grid */}
-        <BlogClientView posts={regularPosts} categories={categories} />
+        <BlogClientView posts={posts} categories={categories} />
       </div>
     </main>
 

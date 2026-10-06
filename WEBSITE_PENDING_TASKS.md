@@ -8,14 +8,19 @@ This document tracks all **website-specific development, on-page SEO, technical 
 
 | Status | Total Tasks |
 |---|---|
-| ✅ **Completed / Ready** | 4 |
-| ⏳ **Pending Website Development Tasks** | 8 |
+| ✅ **Completed / Ready** | 5 |
+| ⏳ **Pending Website Development Tasks** | 7 |
 | 📝 **Pending Content Publishing (Awaiting Writer Drafts)** | 5 |
 
 ---
 
 ## ✅ Completed Tasks (Done)
 
+- [x] **Day 5: RCM & Billing Pillar Guide Page (2,000+ Words)**
+  - *Title:* "The Ultimate Guide to U.S. Healthcare RCM & Medical Billing Outsourcing"
+  - *URL:* `/blog/medical-billing-outsourcing-rcm-guide`
+  - Integrated complete 2026 financial benchmarks (MGMA), clean claim rates, days in A/R, in-house vs. outsourced cost analysis, 5-layer HIPAA security frameworks, vendor evaluation scorecard, 14 voice/AI search FAQs with `FAQPage` schema, strategic internal links to all 10 service pages, all external citations, and downloadable offline PDF (`Svizzera_Medical_Billing_Benchmarks_2026_guide.pdf`).
+  - Added to static sitemap, blog feed, and MongoDB database.
 - [x] **Day 1 & Day 24: Sitemap & Robots Canonical Alignment**
   - Updated `sitemap.ts` and `robots.ts` to canonical domain `https://gosvizzera.com`.
   - Removed duplicate alias `/services/prior-and-retro-authorization` from sitemap to prevent Google Search Console canonical warnings.
@@ -56,10 +61,6 @@ This document tracks all **website-specific development, on-page SEO, technical 
   - Simplify strategy call / contact form down to 3 core fields (*Name, Practice Size / Specialty, Phone or Email*) to maximize lead conversion velocity.
 
 ### 4. New Service Pages to Create
-- [ ] **Day 5: RCM & Billing Pillar Guide Page (2,000+ Words)**
-  - *Title:* "The Complete Guide to U.S. Healthcare RCM & Medical Billing Outsourcing"
-  - *URL:* `/services/medical-billing-rcm-guide` (or dedicated pillar route).
-  - *Sections:* Financial KPIs, MGMA benchmarks, in-house vs. outsourced cost comparisons, HIPAA compliance frameworks.
 - [ ] **Day 19: Specialty Service Page: Cardiology Billing**
   - *Title:* "Cardiology Procedure Coding & Authorization Support"
   - *Target Keyword:* `cardiology medical billing solutions`

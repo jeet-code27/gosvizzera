@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import ArticleContentWithTOC from "@/components/blog/ArticleContentWithTOC";
 import Footer from "@/components/Footer";
+import { staticPosts } from "@/lib/data/static-posts";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -27,18 +28,40 @@ interface PageProps {
 
 export const revalidate = 60; // ISR 60 seconds
 
+function resolveSlug(rawSlug: string): string {
+  if (
+    rawSlug === "the-ultimate-guide-to-us-healthcare-rcm-medical-billing-outsourcing" ||
+    rawSlug === "us-healthcare-rcm-medical-billing-outsourcing"
+  ) {
+    return "medical-billing-outsourcing-rcm-guide";
+  }
+  return rawSlug;
+}
+
 // Generate Dynamic SEO Metadata
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  await connectToDatabase();
-  void Category;
-  void Tag;
-  void Author;
+  const canonicalSlug = resolveSlug(slug);
 
-  const post = await Post.findOne({ slug, status: "Published" })
-    .populate("author", "name avatar role")
-    .populate("category", "name slug")
-    .lean();
+  // Check static posts first
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let post: any = staticPosts[canonicalSlug] || null;
+
+  if (!post) {
+    try {
+      await connectToDatabase();
+      void Category;
+      void Tag;
+      void Author;
+
+      post = await Post.findOne({ slug: canonicalSlug, status: "Published" })
+        .populate("author", "name avatar role")
+        .populate("category", "name slug")
+        .lean();
+    } catch (e) {
+      console.error("DB error in blog generateMetadata:", e);
+    }
+  }
 
   if (!post) {
     return {
@@ -93,17 +116,31 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function SingleBlogPage({ params }: PageProps) {
   const { slug } = await params;
-  await connectToDatabase();
-  void Category;
-  void Tag;
-  void Author;
+  const canonicalSlug = resolveSlug(slug);
 
-  const postRaw = await Post.findOne({ slug, status: "Published" })
-    .populate("author", "name avatar role bio")
-    .populate("category", "name slug")
-    .populate("tags", "name slug")
-    .populate("relatedPosts", "title slug excerpt featuredImage createdAt")
-    .lean();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let postRaw: any = null;
+
+  try {
+    await connectToDatabase();
+    void Category;
+    void Tag;
+    void Author;
+
+    postRaw = await Post.findOne({ slug: canonicalSlug, status: "Published" })
+      .populate("author", "name avatar role bio")
+      .populate("category", "name slug")
+      .populate("tags", "name slug")
+      .populate("relatedPosts", "title slug excerpt featuredImage createdAt")
+      .lean();
+  } catch (e) {
+    console.error("DB connection/query error in SingleBlogPage:", e);
+  }
+
+  // Fallback to static post
+  if (!postRaw && staticPosts[canonicalSlug]) {
+    postRaw = staticPosts[canonicalSlug];
+  }
 
   if (!postRaw) {
     notFound();
@@ -115,15 +152,18 @@ export default async function SingleBlogPage({ params }: PageProps) {
   // Fetch 3 related posts if not manually selected
   let relatedArticles = post.relatedPosts || [];
   if (relatedArticles.length === 0 && post.category && post.category.length > 0) {
-    const fallbackRelated = await Post.find({
-      _id: { $ne: post._id },
-      category: post.category[0]._id,
-      status: "Published",
-    })
-      .limit(3)
-      .select("title slug excerpt featuredImage createdAt")
-      .lean();
-    relatedArticles = JSON.parse(JSON.stringify(fallbackRelated));
+    try {
+      const fallbackRelated = await Post.find({
+        _id: { $ne: post._id },
+        status: "Published",
+      })
+        .limit(3)
+        .select("title slug excerpt featuredImage createdAt")
+        .lean();
+      relatedArticles = JSON.parse(JSON.stringify(fallbackRelated));
+    } catch {
+      relatedArticles = [];
+    }
   }
 
   // JSON-LD: Article Schema

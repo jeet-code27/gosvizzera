@@ -12,6 +12,7 @@ import {
   Sparkles,
   ArrowRight,
   BookOpen,
+  FileDown,
 } from "lucide-react";
 import { toast } from "sonner";
 import { motion, AnimatePresence } from "motion/react";
@@ -29,6 +30,9 @@ interface PostProps {
     content: string;
     faqs?: FAQItem[];
     tags?: Array<{ _id: string; name: string; slug: string }>;
+    pdfUrl?: string;
+    pdfName?: string;
+    pdfSize?: string;
   };
 }
 
@@ -381,6 +385,30 @@ export default function ArticleContentWithTOC({ post }: PostProps) {
                 </button>
               </div>
             </div>
+
+            {/* Sidebar PDF Download Box */}
+            {post.pdfUrl && (
+              <div className="p-6 rounded-3xl bg-gradient-to-br from-teal-500/10 via-emerald-500/5 to-transparent border border-teal-500/30 dark:border-teal-400/20 space-y-3.5 shadow-sm">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-teal-700 dark:text-teal-300 font-sans">
+                  <FileDown className="w-4 h-4 text-teal-600 dark:text-teal-400" />
+                  <span>Executive Guide PDF</span>
+                </div>
+                <h4 className="font-serif text-base font-bold text-slate-900 dark:text-white leading-snug">
+                  Download 2026 RCM Guide
+                </h4>
+                <p className="text-xs text-slate-600 dark:text-slate-300 font-sans leading-relaxed">
+                  Save this complete benchmark scorecard, cost comparisons, and vendor questions for offline review.
+                </p>
+                <a
+                  href={post.pdfUrl}
+                  download={post.pdfName || "Svizzera_Medical_Billing_Benchmarks_2026_guide.pdf"}
+                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold tracking-wide shadow-sm hover:shadow-teal-500/25 transition-all"
+                >
+                  <FileDown className="w-4 h-4" />
+                  <span>Download PDF {post.pdfSize ? `(${post.pdfSize})` : ""}</span>
+                </a>
+              </div>
+            )}
 
             {/* Sidebar Quick Consultation Card */}
             <div className="p-6 rounded-3xl bg-gradient-to-br from-slate-900 to-teal-950 border border-teal-500/20 text-white space-y-3 shadow-xl">
