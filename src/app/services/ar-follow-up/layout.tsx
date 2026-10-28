@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Accounts Receivable Follow-Up Services | Svizzera",
+  title: "Healthcare Accounts Receivable Management & AR Follow-Up | Svizzera",
   description:
-    "Svizzera works your full AR aging report weekly by bucket and payer, recovering underpayments and reducing days in accounts receivable.",
+    "Specialized healthcare accounts receivable management and AR follow-up services. Svizzera works your full AR aging report weekly to recover underpayments and reduce days in accounts receivable.",
   keywords: [
+    "healthcare accounts receivable management",
     "Accounts Receivable Follow-Up Services",
     "AR Recovery Services",
     "Medical AR Follow-Up",
@@ -20,9 +21,9 @@ export const metadata: Metadata = {
     canonical: "https://gosvizzera.com/services/ar-follow-up",
   },
   openGraph: {
-    title: "Accounts Receivable Follow-Up Services | Svizzera",
+    title: "Healthcare Accounts Receivable Management & AR Follow-Up | Svizzera",
     description:
-      "Svizzera works your full AR aging report weekly by bucket and payer, recovering underpayments and reducing days in accounts receivable.",
+      "Specialized healthcare accounts receivable management and AR follow-up services. Svizzera works your full AR aging report weekly to recover underpayments and reduce days in accounts receivable.",
     url: "https://gosvizzera.com/services/ar-follow-up",
     siteName: "Svizzera",
     type: "website",
@@ -37,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Accounts Receivable Follow-Up Services | Svizzera",
+    title: "Healthcare Accounts Receivable Management & AR Follow-Up | Svizzera",
     description:
-      "Svizzera works your full AR aging report weekly by bucket and payer, recovering underpayments and reducing days in accounts receivable.",
+      "Specialized healthcare accounts receivable management and AR follow-up services. Svizzera works your full AR aging report weekly to recover underpayments and reduce days in accounts receivable.",
     images: ["/images/gosvizzera-logo.png"],
   },
 };

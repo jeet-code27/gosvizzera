@@ -147,9 +147,9 @@ const denialWorkflowSteps: Step[] = [
 // 10 FAQs for Denial Management
 const denialManagementFaqs: FAQItem[] = [
   {
-    question: "What is medical claim denial management?",
+    question: "What is RCM denial management?",
     answer:
-      "Medical claim denial management is the process of identifying why claims are denied, correcting or appealing eligible claims, following them through resolution, and analysing recurring denial causes to help prevent future problems.",
+      "RCM denial management is the strategic process of identifying why claims are denied, correcting or appealing eligible claims, tracking them through resolution, and analyzing recurring denial patterns across the entire revenue cycle to prevent future problems.",
     meta: "Overview",
   },
   {
@@ -183,9 +183,9 @@ const denialManagementFaqs: FAQItem[] = [
     meta: "Prevention",
   },
   {
-    question: "Does Svizzera only work on denied claims?",
+    question: "How does RCM denial management integrate with full-cycle billing?",
     answer:
-      "No. Denial management can connect with claims management, A/R follow-up, medical billing, and broader revenue cycle management so denial information can be used to improve the wider billing process.",
+      "Our RCM denial management connects directly with front-end insurance verification, certified coding, clearinghouse claims scrubbing, and accounts receivable follow-up so denial data continuously improves the entire revenue cycle workflow.",
     meta: "Integration",
   },
   {
@@ -340,7 +340,7 @@ export default function DenialManagementPage() {
               Repeated medical claim denials can quietly drain a practice&apos;s revenue while consuming hours of staff time. One denied claim may seem manageable. A pattern of denials across payers, procedures, providers, or documentation issues is a much bigger problem.
             </p>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-sans font-light leading-relaxed">
-              Svizzera Healthcare provides medical claim denial management services for U.S. medical practices that need more than basic claim follow-up. Our approach traces denials back to their underlying causes, addresses the individual claim, and feeds what we learn back into the billing process to help prevent repeat denials.
+              Svizzera Healthcare provides end-to-end RCM denial management and recovery services for U.S. medical practices that need more than basic claim follow-up. Our approach traces denials back to their underlying causes, addresses the individual claim, and feeds what we learn back into the billing process to help prevent repeat denials.
             </p>
           </motion.div>
 
@@ -435,7 +435,7 @@ export default function DenialManagementPage() {
               </div>
 
               <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-slate-900 dark:text-white leading-[1.15]">
-                What Is Medical Claim <br className="hidden sm:inline" />
+                What Is RCM <br className="hidden sm:inline" />
                 <span className="italic text-brand dark:text-teal-400 font-medium">
                   Denial Management?
                 </span>
@@ -443,7 +443,7 @@ export default function DenialManagementPage() {
 
               <div className="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed">
                 <p>
-                  Medical claim denial management is the process of identifying why claims are denied, correcting issues where possible, resubmitting or appealing eligible claims, and analysing denial patterns to reduce future occurrences.
+                  RCM denial management is the structured process of identifying why claims are denied, correcting issues where possible, resubmitting or appealing eligible claims, and analysing denial patterns across the entire revenue cycle to reduce future occurrences.
                 </p>
                 <p className="font-medium text-slate-900 dark:text-slate-100">
                   Effective denial management should not stop once an individual claim is corrected.

@@ -288,10 +288,10 @@ export default function ChiropracticBillingPage() {
               Stop losing revenue to benefit caps, documentation edits, and Medicare write-offs.
             </p>
             <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed">
-              Chiropractic billing can become difficult when payer-specific visit limits, medical-necessity requirements, authorisation rules, documentation expectations, and timely filing requirements affect whether a claim is paid. A billing process that does not monitor these requirements can leave a practice dealing with avoidable denials, delayed reimbursement, and growing accounts receivable.
+              Medical billing for chiropractic practices can become difficult when payer-specific visit limits, medical-necessity requirements, authorisation rules, documentation expectations, and timely filing requirements affect whether a claim is paid. A billing process that does not monitor these requirements can leave a practice dealing with avoidable denials, delayed reimbursement, and growing accounts receivable.
             </p>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-sans font-light leading-relaxed">
-              Svizzera Healthcare provides structured medical billing and revenue cycle management built to navigate complex chiropractic payer rules, eliminate visit-cap rejections, and protect practice cash flow.
+              Svizzera Healthcare provides structured medical billing for chiropractic practices and full revenue cycle management built to navigate complex chiropractic payer rules, eliminate visit-cap rejections, and protect practice cash flow.
             </p>
           </motion.div>
 
@@ -394,7 +394,7 @@ export default function ChiropracticBillingPage() {
 
               <div className="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed">
                 <p>
-                  For a chiropractic practice, billing is not simply about submitting a claim after a visit. Payer requirements can influence whether services are covered, whether additional documentation is needed, and whether the patient&apos;s benefit or visit limit has been reached. A specialty-aware workflow should identify these requirements before they become payment problems.
+                  For a chiropractic practice, billing is not simply about submitting a claim after a visit. Precise billing for chiropractic requires tracking visit caps, modifier rules, and medical necessity documentation before claims leave your desk. A specialty-aware workflow should identify these requirements before they become payment problems.
                 </p>
                 <p>
                   The Svizzera service positioning is built around monitoring payer rules, identifying potential visit-limit issues, supporting appropriate documentation and billing workflows, and following unpaid or denied claims through resolution.

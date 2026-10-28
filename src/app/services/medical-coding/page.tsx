@@ -135,6 +135,18 @@ const codingWorkflowSteps: Step[] = [
 // FAQs for Medical Coding
 const medicalCodingFaqs: FAQItem[] = [
   {
+    question: "Why do practices choose medical coding companies over hiring in-house?",
+    answer:
+      "Medical coding companies eliminate the high overhead, recruitment challenges, and turnover risks associated with in-house coding staff. With Svizzera, practices gain immediate access to AAPC and AHIMA certified coders with deep specialty experience and a guaranteed 98%+ accuracy rate.",
+    meta: "Coding Companies",
+  },
+  {
+    question: "What is included in your medical coding outsourcing services?",
+    answer:
+      "Our medical coding outsourcing services encompass complete chart review, ICD-10-CM diagnosis assignment, CPT procedure coding, HCPCS Level II coding, modifier optimization, NCCI edit validation, routine pre-bill audits, and coding denial analysis across 30+ specialties.",
+    meta: "Outsourcing Scope",
+  },
+  {
     question: "How do certified medical coders improve reimbursement?",
     answer:
       "Svizzera’s CPC-credentialed coding team assigns accurate ICD-10-CM, CPT, and HCPCS Level II codes based on clinical documentation and payer guidelines. Accurate coding helps reduce claim denials, improve first-pass claim acceptance, and maximize reimbursement.",
@@ -207,7 +219,7 @@ export default function MedicalCodingPage() {
               Accurate Coding. Faster Reimbursements. Fewer Denials.
             </p>
             <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed">
-              Coding errors are one of the leading causes of claim denials, resulting in delayed payments and lost revenue. Svizzera’s CPC-credentialed coding team delivers accurate, guidelines-based coding across 30+ medical specialties, helping improve claim accuracy and maximize reimbursement while working seamlessly within your existing EHR.
+              Coding errors are one of the leading causes of claim denials, resulting in delayed payments and lost revenue. As one of the top medical coding companies in the United States, Svizzera provides comprehensive medical coding outsourcing services powered by our CPC-credentialed coding team. We deliver accurate, guidelines-based coding across 30+ medical specialties, helping improve claim accuracy and maximize reimbursement while working seamlessly within your existing EHR.
             </p>
           </motion.div>
 

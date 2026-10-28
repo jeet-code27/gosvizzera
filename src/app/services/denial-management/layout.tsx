@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Medical Claim Denial Management Services | Svizzera Healthcare",
+  title: "Medical Claim & RCM Denial Management Services | Svizzera Healthcare",
   description:
-    "Root-cause denial management, first-level appeals, and denial prevention for U.S. medical practices. See how Svizzera reduces preventable denials.",
+    "Root-cause RCM denial management, first-level appeals, and denial prevention for U.S. medical practices. Recover lost revenue and reduce recurring claim rejections with Svizzera.",
   keywords: [
+    "rcm denial management",
     "medical claim denial management services",
     "denial management company",
     "claim denial appeals service",
@@ -20,9 +21,9 @@ export const metadata: Metadata = {
     canonical: "https://gosvizzera.com/services/denial-management",
   },
   openGraph: {
-    title: "Medical Claim Denial Management Services | Svizzera Healthcare",
+    title: "Medical Claim & RCM Denial Management Services | Svizzera Healthcare",
     description:
-      "Root-cause denial management, first-level appeals, and denial prevention for U.S. medical practices. See how Svizzera reduces preventable denials.",
+      "Root-cause RCM denial management, first-level appeals, and denial prevention for U.S. medical practices. Recover lost revenue and reduce recurring claim rejections with Svizzera.",
     url: "https://gosvizzera.com/services/denial-management",
     siteName: "Svizzera Healthcare",
     type: "website",
@@ -37,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Medical Claim Denial Management Services | Svizzera Healthcare",
+    title: "Medical Claim & RCM Denial Management Services | Svizzera Healthcare",
     description:
-      "Root-cause denial management, first-level appeals, and denial prevention for U.S. medical practices. See how Svizzera reduces preventable denials.",
+      "Root-cause RCM denial management, first-level appeals, and denial prevention for U.S. medical practices. Recover lost revenue and reduce recurring claim rejections with Svizzera.",
     images: ["/images/gosvizzera-logo.png"],
   },
 };

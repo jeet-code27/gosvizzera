@@ -63,6 +63,18 @@ const authorizationWorkflowSteps: Step[] = [
 // FAQs for Prior & Retro Authorization
 const priorAuthFaqs: FAQItem[] = [
   {
+    question: "Why should healthcare practices work with prior authorization companies?",
+    answer:
+      "Partnering with experienced prior authorization companies like Svizzera removes the administrative burden of holding on the phone with payers, navigating conflicting insurer guidelines, and tracking expirations. Practices that leverage our prior authorization services reduce approval turnaround times by up to 70% and prevent costly treatment delays.",
+    meta: "Companies",
+  },
+  {
+    question: "What prior authorization solutions does Svizzera provide?",
+    answer:
+      "Svizzera delivers end-to-end prior authorization solutions covering pre-service prior authorization, emergency retro authorization, electronic portal submissions, peer-to-peer physician scheduling, and formal first-level denial appeals—all handled directly within your practice's existing EHR.",
+    meta: "Solutions",
+  },
+  {
     question: "How long does onboarding take?",
     answer:
       "Most healthcare teams are operational within 5 to 10 business days depending on payer complexity and documentation requirements.",
@@ -135,7 +147,7 @@ export default function PriorAuthorizationPage() {
               Stop Losing Revenue to Authorization Delays
             </p>
             <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed">
-              Your team belongs at the bedside, not on hold with payers. Svizzera manages your complete prior and retro authorization lifecycle: submission, payer follow-up, denial appeals, and retrospective authorization for emergency and unplanned care.
+              Your team belongs at the bedside, not on hold with payers. Ranked among top-tier prior authorization companies, Svizzera provides comprehensive prior authorization services and tailored prior authorization solutions across all major payers, managing your complete lifecycle: pre-service approval, payer follow-up, denial appeals, and retrospective authorization for urgent care.
             </p>
           </motion.div>
 
@@ -232,7 +244,7 @@ export default function PriorAuthorizationPage() {
             </h2>
 
             <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed max-w-2xl mx-auto">
-              Three integrated services managed by the same dedicated team, inside your existing EHR, with no workflow disruption.
+              Three integrated prior authorization solutions managed by the same dedicated team, inside your existing EHR, with no workflow disruption.
             </p>
           </motion.div>
 

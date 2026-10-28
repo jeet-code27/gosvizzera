@@ -208,6 +208,12 @@ const whyArSvizzeraFeatures: FeatureType[] = [
 // FAQs for AR Follow-Up
 const arFollowUpFaqs: FAQItem[] = [
   {
+    question: "What is healthcare accounts receivable management?",
+    answer:
+      "Healthcare accounts receivable management is the continuous tracking, investigation, and recovery of outstanding payments owed to a healthcare practice by commercial insurers, government payers, and patients. Svizzera categorizes claims by aging buckets (30, 60, 90, 120+ days) and systematically resolves adjudication roadblocks to keep days in AR below industry benchmarks.",
+    meta: "Overview",
+  },
+  {
     question: "How long does onboarding take?",
     answer:
       "Most healthcare teams are operational within 5 to 10 business days depending on payer complexity and documentation requirements.",
@@ -280,7 +286,7 @@ export default function ARFollowUpPage() {
               Stop Letting Earned Revenue Age Into a Write-Off
             </p>
             <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed">
-              The MGMA benchmark for Days in AR is under 40 days, yet an MGMA Stat poll of 519 medical groups found 42% of practices wait 91–120 days before even sending a patient balance to collections. Svizzera works your full AR aging report every week, by bucket, by payer, and by root cause.
+              The MGMA benchmark for Days in AR is under 40 days, yet an MGMA Stat poll of 519 medical groups found 42% of practices wait 91–120 days before even sending a patient balance to collections. As a specialist in healthcare accounts receivable management, Svizzera works your full AR aging report every week, by bucket, by payer, and by root cause to recover delayed cash and accelerate reimbursement.
             </p>
           </motion.div>
 
@@ -369,7 +375,7 @@ export default function ARFollowUpPage() {
             className="max-w-3xl mx-auto text-center space-y-3.5"
           >
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand/5 dark:bg-teal-500/10 border border-brand/15 dark:border-teal-500/20 text-brand dark:text-teal-300 text-xs font-semibold tracking-wider uppercase font-sans">
-              OUR AR MANAGEMENT SERVICES
+              HEALTHCARE ACCOUNTS RECEIVABLE MANAGEMENT
             </div>
 
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-slate-900 dark:text-white leading-[1.15]">
@@ -380,7 +386,7 @@ export default function ARFollowUpPage() {
             </h2>
 
             <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed max-w-2xl mx-auto">
-              A complete accounts receivable workflow — aging buckets worked weekly, denials traced to root cause, and underpayments recovered, all documented in your EHR.
+              A complete healthcare accounts receivable management workflow — aging buckets worked weekly, denials traced to root cause, and underpayments recovered, all documented in your EHR.
             </p>
           </motion.div>
 

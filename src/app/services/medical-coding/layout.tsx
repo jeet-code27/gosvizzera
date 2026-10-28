@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Medical Coding Services | CPC-Certified | Svizzera",
+  title: "Medical Coding Outsourcing Services & Companies | Svizzera",
   description:
-    "CPC-credentialed coders deliver accurate ICD-10-CM, CPT, and HCPCS coding across 30+ specialties, improving claim accuracy and reducing denials.",
+    "Ranked among top medical coding companies, Svizzera provides CPC-certified medical coding outsourcing services across 30+ specialties. Reduce denials and accelerate reimbursement.",
   keywords: [
+    "medical coding companies",
+    "medical coding outsourcing services",
     "Medical Coding Services",
     "CPC-Certified Coders",
     "ICD-10-CM Coding",
@@ -21,9 +23,9 @@ export const metadata: Metadata = {
     canonical: "https://gosvizzera.com/services/medical-coding",
   },
   openGraph: {
-    title: "Medical Coding Services | CPC-Certified | Svizzera",
+    title: "Medical Coding Outsourcing Services & Companies | Svizzera",
     description:
-      "CPC-credentialed coders deliver accurate ICD-10-CM, CPT, and HCPCS coding across 30+ specialties, improving claim accuracy and reducing denials.",
+      "Ranked among top medical coding companies, Svizzera provides CPC-certified medical coding outsourcing services across 30+ specialties. Reduce denials and accelerate reimbursement.",
     url: "https://gosvizzera.com/services/medical-coding",
     siteName: "Svizzera",
     type: "website",
@@ -38,9 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Medical Coding Services | CPC-Certified | Svizzera",
+    title: "Medical Coding Outsourcing Services & Companies | Svizzera",
     description:
-      "CPC-credentialed coders deliver accurate ICD-10-CM, CPT, and HCPCS coding across 30+ specialties, improving claim accuracy and reducing denials.",
+      "Ranked among top medical coding companies, Svizzera provides CPC-certified medical coding outsourcing services across 30+ specialties. Reduce denials and accelerate reimbursement.",
     images: ["/images/gosvizzera-logo.png"],
   },
 };

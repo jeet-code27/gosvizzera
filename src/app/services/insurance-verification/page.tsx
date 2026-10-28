@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { FeatureCard, FeatureType } from "@/components/ui/grid-feature-cards";
 import { LogoCloud } from "@/components/ui/logo-cloud-15";
 import HowItWorks, { type Step } from "@/components/ui/how-it-works";
-import FAQSection from "@/components/ui/faq-monochrome";
+import FAQSection, { type FAQItem } from "@/components/ui/faq-monochrome";
 import { ShieldCheck, Zap, Award, CheckCircle2 } from "lucide-react";
 
 const verificationWorkflowSteps: Step[] = [
@@ -111,6 +111,40 @@ const whatWeDoFeatures: FeatureType[] = [
   },
 ];
 
+// 5 FAQs for Insurance Verification
+const insuranceVerificationFaqs: FAQItem[] = [
+  {
+    question: "What do insurance verification services include?",
+    answer:
+      "Our insurance verification services include active coverage verification, primary vs. secondary payer order confirmation, copay, deductible, and coinsurance calculation, out-of-pocket maximum tracking, and pre-authorization requirement checks up to 72 hours before the scheduled appointment.",
+    meta: "Scope",
+  },
+  {
+    question: "What is the difference between eligibility and benefits verification?",
+    answer:
+      "Eligibility verification confirms whether a patient's insurance policy is active and valid on the date of service. Benefits verification goes deeper to determine specific coverage details for intended procedures, including in-network status, deductible balances, coinsurance rates, visit limits, and required authorizations.",
+    meta: "Verification Types",
+  },
+  {
+    question: "Why should a medical practice consider insurance verification outsourcing?",
+    answer:
+      "Insurance verification outsourcing frees front-desk staff from spending hours on hold with payers or navigating confusing portals. External specialists provide dedicated coverage validation 24 to 72 hours ahead of time, driving eligibility denial rates down to under 0.6% and ensuring accurate patient copays at check-in.",
+    meta: "Outsourcing Benefits",
+  },
+  {
+    question: "Do you integrate with our existing EHR and PM software?",
+    answer:
+      "Yes. Our team logs directly into your EHR (Epic, Cerner, Athenahealth, eClinicalWorks, NextGen, AdvancedMD, etc.) and updates patient demographic and coverage fields with full audit trails.",
+    meta: "Integration",
+  },
+  {
+    question: "How quickly can your team get started?",
+    answer:
+      "Following BAA execution and EHR login setup, our insurance verification specialists are fully operational within 5 to 10 business days.",
+    meta: "Onboarding",
+  },
+];
+
 export default function InsuranceVerificationPage() {
   return (
     <main className="min-h-screen bg-transparent flex flex-col justify-between">
@@ -148,7 +182,7 @@ export default function InsuranceVerificationPage() {
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.18 }}
             className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed max-w-2xl mx-auto pt-2"
           >
-            Eliminate front-end claim rejections and coverage surprises. We verify patient eligibility, co-pays, deductibles, and prior-authorization requirements before appointments take place.
+            Eliminate front-end claim rejections and coverage surprises with specialized insurance verification services. Through comprehensive eligibility and benefits verification and flexible insurance verification outsourcing, we verify patient eligibility, co-pays, deductibles, and prior-authorization requirements before appointments take place.
           </motion.p>
 
           {/* Action CTAs */}
@@ -242,16 +276,16 @@ export default function InsuranceVerificationPage() {
 
               {/* Subheading in Lato */}
               <p className="text-base sm:text-lg font-medium text-slate-800 dark:text-slate-100 font-sans leading-snug">
-                Accurate insurance verification before every appointment to help reduce denials, speed up payments, and maximize collections.
+                Accurate insurance verification services before every appointment to help reduce denials, speed up payments, and maximize collections.
               </p>
 
               {/* Narrative Content */}
               <div className="space-y-3.5 text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed">
                 <p>
-                  Around <strong className="text-slate-900 dark:text-white font-medium">27% of claim denials</strong> occur because insurance eligibility was not properly verified before the patient&apos;s visit. Since each denied claim can cost <strong className="text-slate-900 dark:text-white font-medium">$25 to $181</strong> to correct and resubmit, eligibility verification is one of the most expensive yet most preventable issues in the revenue cycle.
+                  Around <strong className="text-slate-900 dark:text-white font-medium">27% of claim denials</strong> occur because eligibility and benefits verification was not properly performed before the patient&apos;s visit. Since each denied claim can cost <strong className="text-slate-900 dark:text-white font-medium">$25 to $181</strong> to correct and resubmit, thorough front-end validation is one of the highest-ROI investments in the revenue cycle.
                 </p>
                 <p>
-                  Every unverified patient increases financial risk, while timely insurance verification reduces denials and protects your revenue.
+                  By leveraging dedicated insurance verification outsourcing, practices eliminate registration bottlenecks, verify coverage up to 72 hours in advance, and protect predictable cash flow.
                 </p>
               </div>
 
@@ -491,6 +525,7 @@ export default function InsuranceVerificationPage() {
           title="Frequently Asked"
           highlightedTitle="Questions"
           description="Answers to the most common questions healthcare organizations ask before partnering with Svizzera."
+          items={insuranceVerificationFaqs}
         />
       </section>
 

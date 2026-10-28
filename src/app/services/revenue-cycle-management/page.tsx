@@ -208,6 +208,18 @@ const whyRcmSvizzeraFeatures: FeatureType[] = [
 // FAQs for Revenue Cycle Management
 const rcmFaqs: FAQItem[] = [
   {
+    question: "Why should healthcare practices consider outsourcing revenue cycle management?",
+    answer:
+      "Outsourcing revenue cycle management allows healthcare practices to access specialized billing, certified coding, and aggressive AR recovery without the overhead of recruiting and managing in-house billing staff. Practices that partner with established revenue cycle management companies typically see denial rates drop below 3% and collections increase by 5% to 15%.",
+    meta: "Outsourcing RCM",
+  },
+  {
+    question: "How does Svizzera compare to other revenue cycle management companies and RCM companies?",
+    answer:
+      "Unlike generic RCM companies that rely on automated black-box billing, Svizzera is a high-touch revenue cycle management company that assigns dedicated specialty pods, operates directly within your existing EHR, commits to a 1-hour response SLA, and delivers transparent daily and monthly performance reporting.",
+    meta: "RCM Comparison",
+  },
+  {
     question: "What is Revenue Cycle Management (RCM)?",
     answer:
       "Revenue Cycle Management is the process of managing the financial lifecycle of a patient, from appointment scheduling and insurance verification to claims submission, payment collection, and reporting. An effective RCM process helps healthcare providers improve revenue, reduce administrative burden, and maintain compliance.",
@@ -280,10 +292,10 @@ export default function RevenueCycleManagementPage() {
               Fast, Accurate Medical Billing
             </p>
             <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed">
-              Your priority is providing exceptional patient care. Our priority is helping you achieve a healthier revenue cycle through accurate, efficient, and compliant medical billing services.
+              Your priority is providing exceptional patient care. As one of the top revenue cycle management companies in the nation, Svizzera Healthcare Solutions is a full-service revenue cycle management company helping practices accelerate collections, eliminate billing friction, and maintain compliance. For practices exploring outsourcing revenue cycle management, our dedicated team integrates seamlessly with your existing EHR—delivering performance and accountability that stand out among leading rcm companies.
             </p>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-sans font-light leading-relaxed pt-1">
-              At Svizzera Healthcare Solutions, we provide comprehensive RCM services, including medical billing, insurance verification, medical coding, charge entry, denial management, payment posting, and accounts receivable follow-up.
+              At Svizzera Healthcare Solutions, we provide comprehensive RCM solutions, including medical billing, insurance verification, certified medical coding, charge entry, denial management, payment posting, and accounts receivable follow-up.
             </p>
           </motion.div>
 
@@ -523,7 +535,7 @@ export default function RevenueCycleManagementPage() {
             </h2>
 
             <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed max-w-2xl mx-auto">
-              Dedicated, named teams. No rotating agents. Full transparency. Measurable results.
+              When comparing revenue cycle management companies, healthcare leaders choose Svizzera for dedicated, named teams, zero EHR disruption, and measurable financial recovery.
             </p>
           </motion.div>
 

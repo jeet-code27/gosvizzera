@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Insurance Verification & Eligibility Services | Svizzera",
+  title: "Insurance Verification Services & Outsourcing | Eligibility Verification | Svizzera",
   description:
-    "Reduce front-end denials with real-time insurance eligibility and benefits verification before every appointment. 99.4% accuracy, HIPAA-focused, EHR-integrated.",
+    "Reduce front-end denials with real-time insurance verification services, eligibility and benefits verification, and insurance verification outsourcing. 99.4% accuracy, HIPAA-focused, EHR-integrated.",
   keywords: [
+    "insurance verification services",
+    "eligibility and benefits verification",
+    "insurance verification outsourcing",
     "Insurance Verification",
     "Eligibility Services",
     "Patient Insurance Verification",
@@ -21,9 +24,9 @@ export const metadata: Metadata = {
     canonical: "https://gosvizzera.com/services/insurance-verification",
   },
   openGraph: {
-    title: "Insurance Verification & Eligibility Services | Svizzera",
+    title: "Insurance Verification Services & Outsourcing | Eligibility Verification | Svizzera",
     description:
-      "Reduce front-end denials with real-time insurance eligibility and benefits verification before every appointment. 99.4% accuracy, HIPAA-focused, EHR-integrated.",
+      "Reduce front-end denials with real-time insurance verification services, eligibility and benefits verification, and insurance verification outsourcing. 99.4% accuracy, HIPAA-focused, EHR-integrated.",
     url: "https://gosvizzera.com/services/insurance-verification",
     siteName: "Svizzera",
     type: "website",
@@ -38,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Insurance Verification & Eligibility Services | Svizzera",
+    title: "Insurance Verification Services & Outsourcing | Eligibility Verification | Svizzera",
     description:
-      "Reduce front-end denials with real-time insurance eligibility and benefits verification before every appointment. 99.4% accuracy, HIPAA-focused, EHR-integrated.",
+      "Reduce front-end denials with real-time insurance verification services, eligibility and benefits verification, and insurance verification outsourcing. 99.4% accuracy, HIPAA-focused, EHR-integrated.",
     images: ["/images/gosvizzera-logo.png"],
   },
 };

@@ -152,9 +152,9 @@ const outsourcingFaqs: FAQItem[] = [
     meta: "ROI & Fit",
   },
   {
-    question: "What does a medical billing outsourcing company do?",
+    question: "What do medical billing outsourcing companies do?",
     answer:
-      "An outsourced billing company can manage functions such as coding, charge entry, claims submission, payment posting, denial management, accounts receivable follow-up, and revenue cycle reporting. The exact scope depends on the practice's needs.",
+      "Leading medical billing outsourcing companies like Svizzera manage functions such as certified coding, charge entry, electronic claims submission, payment posting, denial management, accounts receivable follow-up, and executive revenue cycle reporting. The exact scope is tailored to each practice's specific clinical workflow and EHR.",
     meta: "Responsibilities",
   },
   {
@@ -346,7 +346,7 @@ export default function MedicalBillingOutsourcingPage() {
               Outsource medical billing without disrupting your EHR, staff, or control.
             </p>
             <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed">
-              Outsourcing your medical billing shouldn&apos;t mean changing your entire practice. Svizzera works with your existing workflow, staff, and technology, providing specialized billing and revenue cycle expertise to improve efficiency, accuracy, and collections.
+              Outsourcing your medical billing shouldn&apos;t mean changing your entire practice. While many medical billing outsourcing companies impose rigid software requirements, Svizzera works seamlessly with your existing workflow, staff, and EHR technology, providing specialized billing and revenue cycle expertise to improve efficiency, accuracy, and collections.
             </p>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-sans font-light leading-relaxed">
               If you are considering outsourcing your medical billing, the decision should be based on three key factors: the effectiveness of your current billing process, your internal team&apos;s capacity, and whether an experienced billing partner can enhance revenue cycle performance while maintaining transparency, accuracy, and control.
@@ -452,7 +452,7 @@ export default function MedicalBillingOutsourcingPage() {
 
               <div className="space-y-4 text-sm sm:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed">
                 <p>
-                  One of the biggest concerns practices have about outsourcing is control. Handing billing to an external company can feel like handing away visibility into one of the most important financial functions of the practice.
+                  One of the biggest concerns practices have when evaluating medical billing outsourcing companies is control. Handing billing to an external company can feel like handing away visibility into one of the most important financial functions of the practice.
                 </p>
                 <p className="font-medium text-slate-900 dark:text-slate-100">
                   That should not be the model.

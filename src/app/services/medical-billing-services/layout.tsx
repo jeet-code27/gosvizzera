@@ -3,9 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Medical Billing Services for U.S. Practices | Svizzera Healthcare",
   description:
-    "Full-service medical billing for physician practices: clean claims, faster payments, fewer denials. HIPAA-focused, BAA provided. Request a free billing review.",
+    "Top-rated among medical billing companies, Svizzera provides full-service medical billing and medical billing services for small practices nationwide. Clean claims, faster payments, fewer denials.",
   keywords: [
     "medical billing services",
+    "medical billing companies",
+    "medical billing services for small practices",
+    "medical billing companies near me",
     "medical billing company",
     "outsourced medical billing services",
     "physician billing services",
@@ -22,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Medical Billing Services for U.S. Practices | Svizzera Healthcare",
     description:
-      "Full-service medical billing for physician practices: clean claims, faster payments, fewer denials. HIPAA-focused, BAA provided. Request a free billing review.",
+      "Top-rated among medical billing companies, Svizzera provides full-service medical billing and medical billing services for small practices nationwide. Clean claims, faster payments, fewer denials.",
     url: "https://gosvizzera.com/services/medical-billing-services",
     siteName: "Svizzera Healthcare",
     type: "website",
@@ -39,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Medical Billing Services for U.S. Practices | Svizzera Healthcare",
     description:
-      "Full-service medical billing for physician practices: clean claims, faster payments, fewer denials. HIPAA-focused, BAA provided. Request a free billing review.",
+      "Top-rated among medical billing companies, Svizzera provides full-service medical billing and medical billing services for small practices nationwide. Clean claims, faster payments, fewer denials.",
     images: ["/images/gosvizzera-logo.png"],
   },
 };

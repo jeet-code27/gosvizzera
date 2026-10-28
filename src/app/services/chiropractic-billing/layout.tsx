@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Chiropractic Billing Services | Svizzera Healthcare Solutions",
+  title: "Chiropractic Billing Services | Billing for Chiropractic | Svizzera",
   description:
-    "Specialized chiropractic billing: visit-limit tracking, Medicare ABN compliance, and denial prevention for chiropractic practices.",
+    "Specialized medical billing for chiropractic practices: visit-limit tracking, Medicare ABN compliance, and denial prevention. Maximize your collections with Svizzera.",
   keywords: [
+    "billing for chiropractic",
+    "billing for chiropractic practices",
     "chiropractic billing services",
     "chiropractic medical billing company",
     "chiropractic RCM",
@@ -20,9 +22,9 @@ export const metadata: Metadata = {
     canonical: "https://gosvizzera.com/services/chiropractic-billing",
   },
   openGraph: {
-    title: "Chiropractic Billing Services | Svizzera Healthcare Solutions",
+    title: "Chiropractic Billing Services | Billing for Chiropractic | Svizzera",
     description:
-      "Specialized chiropractic billing: visit-limit tracking, Medicare ABN compliance, and denial prevention for chiropractic practices.",
+      "Specialized medical billing for chiropractic practices: visit-limit tracking, Medicare ABN compliance, and denial prevention. Maximize your collections with Svizzera.",
     url: "https://gosvizzera.com/services/chiropractic-billing",
     siteName: "Svizzera Healthcare",
     type: "website",
@@ -37,9 +39,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chiropractic Billing Services | Svizzera Healthcare Solutions",
+    title: "Chiropractic Billing Services | Billing for Chiropractic | Svizzera",
     description:
-      "Specialized chiropractic billing: visit-limit tracking, Medicare ABN compliance, and denial prevention for chiropractic practices.",
+      "Specialized medical billing for chiropractic practices: visit-limit tracking, Medicare ABN compliance, and denial prevention. Maximize your collections with Svizzera.",
     images: ["/images/gosvizzera-logo.png"],
   },
 };

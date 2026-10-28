@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Prior & Retro Authorization Services | Svizzera",
+  title: "Prior Authorization Companies & Services | Prior Auth Solutions | Svizzera",
   description:
-    "Svizzera manages end-to-end prior and retro authorization, payer follow-up, and denial appeals so your clinical team stays off the phone with insurers.",
+    "Ranked among top prior authorization companies, Svizzera provides comprehensive prior authorization services and prior authorization solutions for healthcare providers. Expedited approvals and zero EHR disruption.",
   keywords: [
+    "prior authorization companies",
+    "prior authorization services",
+    "prior authorization solutions",
     "Prior Authorization Services",
     "Retro Authorization Services",
     "Medical Prior Authorization",
@@ -20,9 +23,9 @@ export const metadata: Metadata = {
     canonical: "https://gosvizzera.com/services/prior-authorization",
   },
   openGraph: {
-    title: "Prior & Retro Authorization Services | Svizzera",
+    title: "Prior Authorization Companies & Services | Prior Auth Solutions | Svizzera",
     description:
-      "Svizzera manages end-to-end prior and retro authorization, payer follow-up, and denial appeals so your clinical team stays off the phone with insurers.",
+      "Ranked among top prior authorization companies, Svizzera provides comprehensive prior authorization services and prior authorization solutions for healthcare providers. Expedited approvals and zero EHR disruption.",
     url: "https://gosvizzera.com/services/prior-authorization",
     siteName: "Svizzera",
     type: "website",
@@ -37,9 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prior & Retro Authorization Services | Svizzera",
+    title: "Prior Authorization Companies & Services | Prior Auth Solutions | Svizzera",
     description:
-      "Svizzera manages end-to-end prior and retro authorization, payer follow-up, and denial appeals so your clinical team stays off the phone with insurers.",
+      "Ranked among top prior authorization companies, Svizzera provides comprehensive prior authorization services and prior authorization solutions for healthcare providers. Expedited approvals and zero EHR disruption.",
     images: ["/images/gosvizzera-logo.png"],
   },
 };

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Medical Billing Outsourcing Services | Svizzera Healthcare Solutions",
+  title: "Medical Billing Outsourcing Companies & Services | Svizzera",
   description:
-    "Outsource medical billing without disrupting your EHR or staff. Certified coders, weekly AR follow-up, and denial recovery. See how outsourcing works.",
+    "Top-ranked among medical billing outsourcing companies. Outsource medical billing without disrupting your EHR or staff. Certified coders, weekly AR follow-up, and 98%+ clean claims.",
   keywords: [
     "medical billing outsourcing",
-    "outsource medical billing",
     "medical billing outsourcing companies",
+    "outsource medical billing",
     "should I outsource medical billing",
     "outsourced medical billing services",
     "physician billing services",
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     canonical: "https://gosvizzera.com/services/medical-billing-outsourcing",
   },
   openGraph: {
-    title: "Medical Billing Outsourcing Services | Svizzera Healthcare Solutions",
+    title: "Medical Billing Outsourcing Companies & Services | Svizzera",
     description:
-      "Outsource medical billing without disrupting your EHR or staff. Certified coders, weekly AR follow-up, and denial recovery. See how outsourcing works.",
+      "Top-ranked among medical billing outsourcing companies. Outsource medical billing without disrupting your EHR or staff. Certified coders, weekly AR follow-up, and 98%+ clean claims.",
     url: "https://gosvizzera.com/services/medical-billing-outsourcing",
     siteName: "Svizzera Healthcare Solutions",
     type: "website",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Medical Billing Outsourcing Services | Svizzera Healthcare Solutions",
+    title: "Medical Billing Outsourcing Companies & Services | Svizzera",
     description:
-      "Outsource medical billing without disrupting your EHR or staff. Certified coders, weekly AR follow-up, and denial recovery. See how outsourcing works.",
+      "Top-ranked among medical billing outsourcing companies. Outsource medical billing without disrupting your EHR or staff. Certified coders, weekly AR follow-up, and 98%+ clean claims.",
     images: ["/images/gosvizzera-logo.png"],
   },
 };

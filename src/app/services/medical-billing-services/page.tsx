@@ -160,13 +160,25 @@ const billingProcessSteps: Step[] = [
   },
 ];
 
-// 10 FAQs for Medical Billing Services
+// 12 FAQs for Medical Billing Services
 const medicalBillingFaqs: FAQItem[] = [
   {
     question: "What is included in medical billing services?",
     answer:
       "Medical billing services can include insurance verification, charge entry, coding, claim submission, claim monitoring, payment posting, denial management, accounts receivable follow-up, patient billing, and revenue cycle reporting. The exact scope depends on the practice and service agreement.",
     meta: "Scope",
+  },
+  {
+    question: "Do you provide medical billing services for small practices?",
+    answer:
+      "Yes. Svizzera delivers dedicated medical billing services for small practices, independent clinics, and solo practitioners. We provide small practices with certified AAPC/AHIMA coders, 98%+ clean claims, and dedicated account support without requiring costly in-house billing staff.",
+    meta: "Small Practices",
+  },
+  {
+    question: "How does Svizzera compare to medical billing companies near me?",
+    answer:
+      "Many practices begin their search looking for medical billing companies near me. However, modern cloud-based revenue cycle management allows Svizzera to provide the personal responsiveness of a local team paired with the enterprise scalability and 98%+ clean-claim accuracy of leading national medical billing companies.",
+    meta: "Local vs National",
   },
   {
     question: "How much do medical billing services cost?",
@@ -354,7 +366,7 @@ export default function MedicalBillingServicesPage() {
               Clean claims. Faster reimbursement. Fewer avoidable denials.
             </p>
             <p className="text-xs sm:text-sm md:text-base text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed">
-              Your practice should not have to chase claims, troubleshoot denials, or spend hours trying to understand where revenue is getting stuck. Svizzera Healthcare provides full-service medical billing for U.S. physician practices, helping you manage the billing lifecycle with a focus on cleaner claims, faster reimbursement, and fewer avoidable denials.
+              Your practice should not have to chase claims, troubleshoot denials, or spend hours trying to understand where revenue is getting stuck. Recognized among leading medical billing companies in the United States, Svizzera Healthcare provides full-service solutions including specialized medical billing services for small practices and large provider groups, helping you manage the billing lifecycle with cleaner claims, faster reimbursement, and fewer avoidable denials.
             </p>
           </motion.div>
 
@@ -829,7 +841,7 @@ export default function MedicalBillingServicesPage() {
                     Independent & Specialty Practices
                   </h4>
                   <p className="text-xs text-slate-500 dark:text-slate-400 font-sans font-light mt-1">
-                    Solo practitioners and group clinics looking to lower administrative overhead and boost clean claims.
+                    Solo practitioners and group clinics looking for tailored medical billing services for small practices that reduce administrative overhead and accelerate cash flow.
                   </p>
                 </div>
 
@@ -960,10 +972,10 @@ export default function MedicalBillingServicesPage() {
                 EXECUTIVE DECISION GUIDE
               </div>
               <h3 className="font-serif text-2xl text-slate-900 dark:text-white font-normal">
-                What Makes a Medical Billing Company Worth Choosing?
+                What Makes Top Medical Billing Companies Worth Choosing?
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-sans font-light leading-relaxed">
-                A billing company should be judged by more than its fee. Look for clear service scope, specialty and coding expertise, measurable billing performance, transparent reporting, responsive communication, appropriate data protection practices, and a transition process that protects continuity. Svizzera&apos;s approach is built around these practical considerations to make billing easier to manage and leadership visibility complete.
+                A billing partner should be judged by more than its fee. When evaluating medical billing companies or searching for medical billing companies near me, look for clear service scope, specialty and coding expertise, measurable billing performance, transparent reporting, and rapid communication. Svizzera&apos;s approach is built around these practical considerations to make billing easier to manage and leadership visibility complete.
               </p>
             </div>
 

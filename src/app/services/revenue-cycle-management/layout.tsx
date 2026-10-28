@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Revenue Cycle Management Services | Svizzera",
+  title: "Revenue Cycle Management Company & RCM Services | Svizzera",
   description:
-    "Full-service RCM covering billing, coding, insurance verification, denial management, and AR follow-up to accelerate collections and reduce claim denials.",
+    "A leading revenue cycle management company among top RCM companies nationwide. Discover the benefits of outsourcing revenue cycle management with Svizzera to accelerate collections and reduce denials.",
   keywords: [
     "Revenue Cycle Management Services",
+    "revenue cycle management companies",
+    "revenue cycle management company",
+    "outsourcing revenue cycle management",
+    "rcm companies",
     "Healthcare RCM",
     "Full-Service RCM",
     "Medical Billing and Coding",
@@ -21,9 +25,9 @@ export const metadata: Metadata = {
     canonical: "https://gosvizzera.com/services/revenue-cycle-management",
   },
   openGraph: {
-    title: "Revenue Cycle Management Services | Svizzera",
+    title: "Revenue Cycle Management Company & RCM Services | Svizzera",
     description:
-      "Full-service RCM covering billing, coding, insurance verification, denial management, and AR follow-up to accelerate collections and reduce claim denials.",
+      "A leading revenue cycle management company among top RCM companies nationwide. Discover the benefits of outsourcing revenue cycle management with Svizzera to accelerate collections and reduce denials.",
     url: "https://gosvizzera.com/services/revenue-cycle-management",
     siteName: "Svizzera",
     type: "website",
@@ -38,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Revenue Cycle Management Services | Svizzera",
+    title: "Revenue Cycle Management Company & RCM Services | Svizzera",
     description:
-      "Full-service RCM covering billing, coding, insurance verification, denial management, and AR follow-up to accelerate collections and reduce claim denials.",
+      "A leading revenue cycle management company among top RCM companies nationwide. Discover the benefits of outsourcing revenue cycle management with Svizzera to accelerate collections and reduce denials.",
     images: ["/images/gosvizzera-logo.png"],
   },
 };
