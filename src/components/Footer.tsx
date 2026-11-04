@@ -28,11 +28,13 @@ export default function Footer() {
     { name: "Denial Management & Appeals", href: "/services/denial-management" },
     { name: "Aged AR Follow-Up & Recovery", href: "/services/ar-follow-up" },
     { name: "Chiropractic Billing Services", href: "/services/chiropractic-billing" },
+    { name: "Personal Injury Medical Billing", href: "/personal-injury-medical-billing" },
   ];
 
   const specialties = [
     { name: "Cardiology", href: "#specialties" },
     { name: "Primary Care & Internal Med", href: "#specialties" },
+    { name: "Personal Injury & Accident Care", href: "/personal-injury-medical-billing" },
     { name: "Oncology Infusion", href: "#specialties" },
     { name: "Wound Care & Debridement", href: "#specialties" },
     { name: "Gastroenterology (GI)", href: "#specialties" },

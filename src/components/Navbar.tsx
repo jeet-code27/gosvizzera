@@ -65,6 +65,11 @@ const servicesList: ServiceItem[] = [
     href: "/services/chiropractic-billing",
     description: "Visit-limit tracking, Medicare ABN compliance & denial recovery.",
   },
+  {
+    title: "Personal Injury Billing",
+    href: "/personal-injury-medical-billing",
+    description: "PIP, MedPay, LOP & lien claims management for US injury clinics.",
+  },
 ];
 
 export default function Navbar() {
