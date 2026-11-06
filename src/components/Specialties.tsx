@@ -11,6 +11,7 @@ interface Specialty {
   highlight: string;
   desc: string;
   features: string[];
+  link?: string;
   icon: (active: boolean) => React.ReactNode;
 }
 
@@ -156,6 +157,25 @@ const specialtiesData: Specialty[] = [
     icon: (active) => (
       <svg className="w-4 h-4 sm:w-4.5 sm:h-4.5 lg:w-5 lg:h-5 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
         <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+  },
+  {
+    id: "personal-injury",
+    label: "Personal Injury",
+    title: "Personal Injury",
+    highlight: "Medical Billing",
+    desc: "Specialized revenue cycle management for clinics treating accident and personal injury patients. We handle PIP, MedPay, third-party liability, Letters of Protection (LOP), and attorney lien reconciliations with zero billing backlog.",
+    features: [
+      "PIP & MedPay claim processing & benefit limits",
+      "Third-party auto & commercial liability coordination",
+      "Attorney Letter of Protection (LOP) & lien tracking",
+      "Trauma CPT/ICD-10 coding & demand packets",
+    ],
+    link: "/personal-injury-medical-billing",
+    icon: (active) => (
+      <svg className="w-4 h-4 sm:w-4.5 sm:h-4.5 lg:w-5 lg:h-5 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
   },
@@ -375,7 +395,7 @@ export default function Specialties() {
                       — {activeSpecialty.label}
                     </span>
                     <span className="text-[11px] sm:text-xs text-slate-400 dark:text-slate-500 font-mono">
-                      Specialty 0{activeIdx + 1} / 08
+                      Specialty {String(activeIdx + 1).padStart(2, "0")} / {String(specialtiesData.length).padStart(2, "0")}
                     </span>
                   </div>
 
@@ -435,9 +455,21 @@ export default function Specialties() {
                   ))}
                 </div>
 
-                <Button href="/contact" size="sm" className="w-full sm:w-auto">
-                  Consult with {activeSpecialty.label} Specialists &rarr;
-                </Button>
+                <div className="flex flex-col sm:flex-row items-center gap-2.5 w-full sm:w-auto">
+                  {activeSpecialty.link && (
+                    <Button
+                      href={activeSpecialty.link}
+                      variant="outline"
+                      size="sm"
+                      className="w-full sm:w-auto text-brand dark:text-teal-300 border-teal-500/30 hover:bg-teal-50 dark:hover:bg-teal-950/40"
+                    >
+                      View Dedicated PI Page &rarr;
+                    </Button>
+                  )}
+                  <Button href="/contact" size="sm" className="w-full sm:w-auto">
+                    Consult with {activeSpecialty.label} Specialists &rarr;
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
